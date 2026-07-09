@@ -11,8 +11,8 @@ export HOST="${HOST:-${HOSTNAME:-$(hostname)}}"
 
 # --- Your TACC identity ---
 TACC_USER="devansh"
-TACC_HOST="ls6.tacc.utexas.edu"
-TACC_ALLOCATION="OTH26002"
+TACC_HOST=""
+TACC_ALLOCATION=""
 
 # --- Project directories ---
 TACC_WORK="/work/07880/devansh/lonestar/cad-genetics"
