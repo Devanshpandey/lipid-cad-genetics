@@ -3,9 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21285448.svg)](https://doi.org/10.5281/zenodo.21285448)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Analysis code for **"Convergent common-variant, causal, and rare-variant genetic
-evidence delineates the lipid–coronary artery disease axis in 402,200 UK Biobank
-participants"** (Pandey & Narasimhan).
+Analysis code for **"Integrated common-variant, causal, and rare-coding evidence prioritizes lipid pathways and drug targets for coronary artery disease in UK Biobank"** (Pandey & Narasimhan).
 
 Archived on Zenodo: **https://doi.org/10.5281/zenodo.21285448** (concept DOI, always resolves to the latest version).
 

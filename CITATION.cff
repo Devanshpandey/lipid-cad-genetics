@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the following."
-title: "Convergent common-variant, causal, and rare-variant genetic evidence delineates the lipid-coronary artery disease axis in UK Biobank"
+title: "Integrated common-variant, causal, and rare-coding evidence prioritizes lipid pathways and drug targets for coronary artery disease in UK Biobank"
 type: software
 authors:
   - family-names: Pandey
