@@ -1,0 +1,53 @@
+name: cad-genetics
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # --- Core languages ---
+  - python=3.11
+  - r-base=4.3.2
+
+  # --- CLI genomics tools ---
+  - bioconda::plink2=2.00a5.10
+  - bioconda::regenie=3.4.1
+  - bioconda::bcftools=1.19
+  - bioconda::htslib=1.19        # provides tabix, bgzip
+  - bioconda::samtools=1.19
+
+  # --- Python packages ---
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - networkx
+  - statsmodels
+  - polars                       # fast I/O for large sumstats
+  - pyarrow
+  - tqdm
+  - requests
+  - pip
+
+  # --- R packages (via conda-forge) ---
+  - r-data.table
+  - r-ggplot2
+  - r-dplyr
+  - r-tidyr
+  - r-stringr
+  - r-optparse                   # CLI argument parsing in R scripts
+  - r-rcpp
+  - r-matrix
+  - r-biocmanager
+
+  # --- R statistical genetics ---
+  # TwoSampleMR, coloc, susieR, WGCNA — install via R (see setup_tacc.sh)
+  # They have C++ dependencies best handled inside R
+
+  - pip:
+    # LDSC — installed from GitHub
+    - git+https://github.com/bulik/ldsc.git
+    # scanpy for single-cell (Agent 3)
+    - scanpy==1.9.8
+    - anndata
+    - leidenalg

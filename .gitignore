@@ -1,0 +1,77 @@
+# ============================================================
+# DATA EXCLUSIONS — no UK Biobank or individual-level data in this repo.
+# UKB data are available only via the UK Biobank Access Management System.
+# Code (*.R, *.py, *.sh, *.slurm) is always kept (negations at bottom).
+# ============================================================
+
+# Genotype / sequence formats
+*.bed
+*.bim
+*.fam
+*.pgen
+*.pvar
+*.psam
+*.bgen
+*.sample
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.cram
+*.crai
+
+# Summary statistics / tabular data
+*.regenie
+*.regenie.gz
+*.gz
+*.sumstats
+*.sumstats.gz
+*.csv
+*.tsv
+
+# Data / results directories
+data/
+results/
+exports/
+logs/
+prs_weights*/
+gwas_summary_stats/
+
+# Data files by keyword (data, not code)
+*eid*.txt
+*EID*.txt
+pheno_*.txt
+*phenotype*.txt
+*covariate*.txt
+*.pheno
+
+# LD reference panels
+*ldblk*
+*snpinfo*
+
+# Scratch / temp / env
+scratch/
+tmp/
+*.log
+*.out
+*.err
+.DS_Store
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.ipynb_checkpoints/
+
+# ============================================================
+# Always keep code and docs (override any data pattern above)
+# ============================================================
+!*.R
+!*.r
+!*.py
+!*.sh
+!*.slurm
+!*.pl
+!*.md
+!*.yml
+!*.yaml
+!LICENSE
+!.gitignore
