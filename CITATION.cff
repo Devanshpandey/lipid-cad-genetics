@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the following."
+title: "Convergent common-variant, causal, and rare-variant genetic evidence delineates the lipid-coronary artery disease axis in UK Biobank"
+type: software
+authors:
+  - family-names: Pandey
+    given-names: Devansh
+    affiliation: "Department of Integrative Biology, The University of Texas at Austin"
+  - family-names: Narasimhan
+    given-names: Vagheesh M.
+    email: vagheesh@utexas.edu
+    affiliation: "The University of Texas at Austin"
+repository-code: "https://github.com/Devanshpandey/lipid-cad-genetics"
+license: MIT
+version: 1.0.0
+date-released: "2026-07-09"
+keywords:
+  - coronary artery disease
+  - blood lipids
+  - Mendelian randomization
+  - colocalization
+  - rare-variant burden
+  - UK Biobank
+  - FinnGen
+abstract: >-
+  Analysis code for a five-layer human-genetic study of the lipid-coronary
+  artery disease axis in UK Biobank (GWAS, LD-score genetic correlation,
+  multivariable Mendelian randomization, colocalization, SuSiE fine-mapping, and
+  exome-wide rare-variant burden), with two-sample MR replication against FinnGen.
+  Code only; no UK Biobank or individual-level data are included.
