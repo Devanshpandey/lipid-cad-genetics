@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the following."
-title: "Integrated common-variant, causal, and rare-coding evidence prioritizes lipid pathways and drug targets for coronary artery disease in UK Biobank"
+title: "Convergent common- and rare-variant genetics maps lipid pathways and candidate targets for coronary artery disease"
 type: software
 authors:
   - family-names: Pandey
@@ -12,19 +12,27 @@ authors:
     affiliation: "The University of Texas at Austin"
 repository-code: "https://github.com/Devanshpandey/lipid-cad-genetics"
 license: MIT
-version: 1.0.0
-date-released: "2026-07-09"
+version: 1.1.0
+date-released: "2026-07-12"
 keywords:
   - coronary artery disease
   - blood lipids
   - Mendelian randomization
   - colocalization
   - rare-variant burden
+  - cis-eQTL colocalization
+  - cross-ancestry replication
   - UK Biobank
   - FinnGen
+  - CARDIoGRAMplusC4D
+  - Million Veteran Program
 abstract: >-
-  Analysis code for a five-layer human-genetic study of the lipid-coronary
+  Analysis code for a six-layer human-genetic study of the lipid-coronary
   artery disease axis in UK Biobank (GWAS, LD-score genetic correlation,
-  multivariable Mendelian randomization, colocalization, SuSiE fine-mapping, and
-  exome-wide rare-variant burden), with two-sample MR replication against FinnGen.
-  Code only; no UK Biobank or individual-level data are included.
+  multivariable Mendelian randomization, Bayesian colocalization, SuSiE
+  fine-mapping, and exome-wide rare-variant burden), integrated with a
+  discovery-only convergence score for drug-target prioritization. Conclusions are
+  replicated in FinnGen and CARDIoGRAMplusC4D and, within ancestry, in African- and
+  Hispanic/admixed-American Million Veteran Program participants (with MR-PRESSO),
+  and effector genes are resolved by cis-eQTL colocalization. Code only; no UK
+  Biobank or individual-level data are included.
