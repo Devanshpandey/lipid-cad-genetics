@@ -52,10 +52,25 @@ Run on the TACC Lonestar6 cluster.
 | *cis*-LPA restricted MR | FinnGen CAD | `replication/cis_lpa_mr.sh` |
 | Statin-naive / covariate sensitivity | UK Biobank | `analysis/statin_naive_sensitivity.sh` |
 
-> The CARDIoGRAMplusC4D two-sample MR, the cross-ancestry GLGC→Million Veteran Program
-> MR (with MR-PRESSO outlier correction), the MR-BMA analysis, and the cis-eQTL
-> (GTEx / eQTL Catalogue) colocalization are described in the paper; their scripts are
-> being added to `replication/` and `analysis/` in the next release.
+Additional robustness, replication, and sensitivity analyses from the revision live
+in `scripts/agent1_genetics/strengthen/`:
+
+| Analysis | Script |
+|---|---|
+| CARDIoGRAMplusC4D two-sample MR | `strengthen/external_mr.R`, `extract_external.sh` |
+| Cross-ancestry MR (GLGC → Million Veteran Program CAD) | `strengthen/multiancestry_mr.R`, `run_multiancestry_mr.sh` |
+| Cross-ancestry MR + MR-PRESSO / pleiotropy-robust sensitivity | `strengthen/multiancestry_mr_sens.R`, `job_ma_sens.slurm` |
+| Cross-ancestry instrument transferability | `strengthen/job_xanc_scatter.slurm` |
+| MR-BMA (Bayesian model averaging) + prior sensitivity | `strengthen/mrbma_discordant.R`, `mrbma_prior_sens.R` |
+| *cis*-eQTL colocalization (GTEx v8 / eQTL Catalogue) | `strengthen/job_eqtl_coloc.slurm` |
+| coloc.susie + SuSiE credible-set (L) sensitivity | `strengthen/coloc_susie.R`, `coloc_lean.R`, `susie_L_sensitivity.R` |
+| Convergence-score layer ablation & weight sensitivity | `strengthen/ablation.R`, `score_sensitivity.R` |
+| Open Targets locus-to-gene benchmark | `strengthen/l2g_benchmark.R` |
+| *PDE3B* follow-up (PheWAS, carrier Cox, diagnostics) | `strengthen/pde3b_phewas.R`, `pde3b_cox.R`, `job_pde3b_diag.slurm` |
+
+Absolute paths and the SLURM allocation in these scripts are replaced with
+placeholders (`/path/to/...`, `YOUR_ALLOCATION`); edit them for your environment.
+See `strengthen/README_multiancestry_mr.md` for the cross-ancestry MR workflow.
 
 ## Figures
 
