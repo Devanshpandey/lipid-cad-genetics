@@ -5,7 +5,7 @@
 suppressMessages({library(data.table); library(susieR)})
 set.seed(42)
 
-BFILE  <- "/corral/utexas/UKB-Imaging-Genetics/UKB_GENOTYPE_QC_400k/merged_maf0.001_biallel_bbf_400k/merged_sub_chrom_maf0.001"
+BFILE  <- "/path/to/ukb_genotypes/merged_maf0.001_biallel_bbf_400k/merged_sub_chrom_maf0.001"
 PLINK  <- "/path/to/software/plink"
 SUM    <- "/path/to/cad-genetics/results/agent1_genetics/gwas_summary_stats/merged/lipids_LDL_C.txt.gz"
 CHR    <- 19L; BP <- 11202306L; W <- 500000L

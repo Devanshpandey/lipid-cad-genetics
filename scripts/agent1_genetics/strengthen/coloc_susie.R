@@ -1,7 +1,7 @@
 suppressPackageStartupMessages({library(data.table);library(susieR);library(coloc);library(Matrix)})
 set.seed(42)
 MERGED <- "/path/to/cad-genetics/results/agent1_genetics/gwas_summary_stats/merged"
-LDBF   <- "/corral/utexas/UKB-Imaging-Genetics/UKB_GENOTYPE_QC_400k/merged_maf0.001_biallel_bbf_400k/merged_sub_chrom_maf0.001"
+LDBF   <- "/path/to/ukb_genotypes/merged_maf0.001_biallel_bbf_400k/merged_sub_chrom_maf0.001"
 PLINK1 <- "/path/to/software/plink"
 OUT    <- "/path/to/cad-genetics/results/agent1_genetics/strengthen"
 S_CAD  <- 0.123; W <- 5e5

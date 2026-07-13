@@ -70,7 +70,7 @@ cat(sprintf("full pLoF burden beta=%.3f P=%.2e ; LOVO beta range %.3f..%.3f\n",
 
 ## ---------- survival diagnostics (KM / Schoenfeld / power) ----------
 carr <- data.table(IID=as.integer(rawP$IID), carrier=as.integer(rowSums(fp$M[,..keepP],na.rm=TRUE)>=1))
-D <- "/corral/utexas/UKB-Imaging-Genetics/temp_imaging_data/pheno_split_into_files_011924"
+D <- "/path/to/ukb_phenotypes"
 rd <- function(fid,nm){d<-fread(sprintf("%s/fid%s.csv",D,fid)); x<-data.table(IID=as.integer(d[[1]]), v=as.Date(as.character(d[[2]]))); setnames(x,"v",nm); x}
 base<-rd("53","base"); cad<-rd("131306","cad"); dth<-rd("40000","death")
 m <- Reduce(function(a,b) merge(a,b,by="IID",all.x=TRUE), list(cov, carr, base, cad, dth))

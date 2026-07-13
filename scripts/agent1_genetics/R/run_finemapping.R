@@ -52,9 +52,9 @@ compute_ld_matrix <- function(snp_list, chr, geno_prefix, tmp_dir) {
   ld_prefix <- file.path(tmp_dir, "ld")
   # Use plink1.9 for LD: --r square produces correlation matrix (not r²)
   # plink2 --r-unphased flag not available in v2.00a5LM (June 2023 build)
-  plink1_bin <- "/work/07880/devansh/lonestar/software/plink"
+  plink1_bin <- "/path/to/software/plink"
   if (!file.exists(plink1_bin)) {
-    plink2_bin <- Sys.getenv("PLINK2", unset = "/work/07880/devansh/lonestar/software/plink2")
+    plink2_bin <- Sys.getenv("PLINK2", unset = "/path/to/software/plink2")
     plink1_bin <- sub("plink2$", "plink", plink2_bin)
   }
 

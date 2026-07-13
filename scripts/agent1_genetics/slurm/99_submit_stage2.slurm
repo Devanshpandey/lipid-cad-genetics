@@ -15,14 +15,14 @@
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -t 00:15:00
-#SBATCH -A OTH26002
+#SBATCH -A YOUR_ALLOCATION
 #SBATCH -o %x_%j.out
 #SBATCH -e %x_%j.err
 #SBATCH --mail-type=fail
-#SBATCH --mail-user=devanshpandey@utexas.edu
+#SBATCH --mail-user=YOUR_EMAIL
 
 set -euo pipefail
-_REPO="${SLURM_SUBMIT_DIR:-/work/07880/devansh/lonestar/cad-genetics}"
+_REPO="${SLURM_SUBMIT_DIR:-/path/to/cad-genetics}"
 source "${_REPO}/config/tacc_paths.sh"
 
 # RUN_LOG_DIR exported by run_all.sh; fall back if launched standalone

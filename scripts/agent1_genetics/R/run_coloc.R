@@ -137,10 +137,10 @@ fwrite(sig_snps[, .(SNP, pval)], tmp_pval, sep = "\t")
 # NOTE: plink2 does not support --clump; use plink1.9 for clumping.
 # plink1.9 is available at the same software directory.
 geno <- Sys.getenv("UKB_GENO_STEP2")
-plink1_bin <- "/work/07880/devansh/lonestar/software/plink"  # plink1.9
+plink1_bin <- "/path/to/software/plink"  # plink1.9
 if (!file.exists(plink1_bin)) {
   plink1_bin <- sub("plink2$", "plink", Sys.getenv("PLINK2",
-    unset = "/work/07880/devansh/lonestar/software/plink2"))
+    unset = "/path/to/software/plink2"))
 }
 clump_cmd <- sprintf(
   "%s --bfile %s --clump %s --clump-snp-field SNP --clump-field pval --clump-p1 5e-8 --clump-p2 1e-4 --clump-r2 0.001 --clump-kb 10000 --out %s 2>/dev/null",

@@ -13,17 +13,17 @@
 #SBATCH -N 1
 #SBATCH -n 16
 #SBATCH -t 08:00:00
-#SBATCH -A OTH26002
+#SBATCH -A YOUR_ALLOCATION
 #SBATCH -o %x_%A_%a.out
 #SBATCH -e %x_%A_%a.err
 #SBATCH --mail-type=end,fail
-#SBATCH --mail-user=devanshpandey@utexas.edu
+#SBATCH --mail-user=YOUR_EMAIL
 
 set -euo pipefail
-_REPO="${SLURM_SUBMIT_DIR:-/work/07880/devansh/lonestar/cad-genetics}"
+_REPO="${SLURM_SUBMIT_DIR:-/path/to/cad-genetics}"
 source "${_REPO}/config/tacc_paths.sh"
 
-PLINK1="/work/07880/devansh/lonestar/software/plink"
+PLINK1="/path/to/software/plink"
 [[ -f "${PLINK1}" ]] || { echo "ERROR: plink1.9 not found at ${PLINK1}" >&2; exit 1; }
 
 set +u

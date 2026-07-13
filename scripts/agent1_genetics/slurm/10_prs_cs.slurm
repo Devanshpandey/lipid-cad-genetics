@@ -16,14 +16,14 @@
 #SBATCH -N 1
 #SBATCH -n 4
 #SBATCH -t 04:00:00
-#SBATCH -A OTH26002
+#SBATCH -A YOUR_ALLOCATION
 #SBATCH -o %x_%A_%a.out
 #SBATCH -e %x_%A_%a.err
 #SBATCH --mail-type=end,fail
-#SBATCH --mail-user=devanshpandey@utexas.edu
+#SBATCH --mail-user=YOUR_EMAIL
 
 set -euo pipefail
-_REPO="${SLURM_SUBMIT_DIR:-/work/07880/devansh/lonestar/cad-genetics}"
+_REPO="${SLURM_SUBMIT_DIR:-/path/to/cad-genetics}"
 source "${_REPO}/config/tacc_paths.sh"
 
 set +u
@@ -36,7 +36,7 @@ export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1
 
-PRSCS_DIR="/work/07880/devansh/lonestar/software/PRScs"
+PRSCS_DIR="/path/to/software/PRScs"
 PRSCS_REF="${PRSCS_DIR}/ldblk_ukbb_eur"
 BIM_PREFIX="${UKB_GENO_STEP2}"
 

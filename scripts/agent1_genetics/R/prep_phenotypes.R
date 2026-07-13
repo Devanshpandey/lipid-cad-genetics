@@ -24,9 +24,9 @@
 #
 # Usage:
 #   Rscript prep_phenotypes.R \
-#     --pheno_dir /corral/.../pheno_split_into_files_011924 \
-#     --icd_file  /corral/.../binary_ICD_011924.txt \
-#     --sample    /corral/.../geno_qc_eids_400k_white_british_2023-11-29.txt \
+#     --pheno_dir /path/to/ukb/phenotypes \
+#     --icd_file  /path/to/ukb/icd_codes.txt \
+#     --sample    /path/to/ukb/sample_eids.txt \
 #     --out       /path/to/output_dir
 
 suppressPackageStartupMessages({

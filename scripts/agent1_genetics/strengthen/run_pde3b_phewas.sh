@@ -5,7 +5,7 @@ PH=$ROOT/results/agent1_genetics/phenotypes
 OUT=$ROOT/results/agent1_genetics/strengthen
 PLINK2=/path/to/software/plink2
 RSCRIPT=/path/to/anaconda3/envs/r_env/bin/Rscript
-WES=/corral-repl/utexas/UKB-Imaging-Genetics/UKB_GENOTYPE/ukb_pfile/wes_allchr
+WES=/path/to/ukb_wes/wes_allchr
 mkdir -p $OUT; cd $OUT
 awk '$5=="PDE3B" && $6=="pLoF"{print $1":"$2":"$3":"$4}' \
   $ROOT/results/agent1_genetics/burden_masks/by_chr/anno_chr11.txt | sort -u > pde3b_plof.snplist

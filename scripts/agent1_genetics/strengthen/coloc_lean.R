@@ -1,7 +1,7 @@
 suppressPackageStartupMessages({library(data.table);library(susieR);library(coloc)})
 set.seed(42)
 M<-"/path/to/cad-genetics/results/agent1_genetics/gwas_summary_stats/merged"
-LDBF<-"/corral/utexas/UKB-Imaging-Genetics/UKB_GENOTYPE_QC_400k/merged_maf0.001_biallel_bbf_400k/merged_sub_chrom_maf0.001"
+LDBF<-"/path/to/ukb_genotypes/merged_maf0.001_biallel_bbf_400k/merged_sub_chrom_maf0.001"
 PLINK1<-"/path/to/software/plink"; S_CAD<-0.123; W<-1.2e5
 loci<-data.table(name=c("PCSK9","LDLR"),chr=c(1,19),bp=c(55505647,11197598))
 rd<-function(f,chr,bp){dt<-fread(cmd=paste("gunzip -c",shQuote(f)),na.strings="NA")

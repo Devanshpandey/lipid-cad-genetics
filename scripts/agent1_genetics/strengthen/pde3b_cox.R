@@ -7,7 +7,7 @@ maf <- pmin(af,1-af); maf[is.na(maf)]<-1; keep <- vc[maf<0.01]
 raw[, ncopy := rowSums(M[,..keep], na.rm=TRUE)]
 carr <- data.table(IID=as.integer(raw$IID), carrier=as.integer(raw$ncopy>=1))
 cat(sprintf("pLoF variants kept: %d ; carriers: %d\n", length(keep), sum(carr$carrier)))
-D <- "/corral/utexas/UKB-Imaging-Genetics/temp_imaging_data/pheno_split_into_files_011924"
+D <- "/path/to/ukb_phenotypes"
 rd <- function(fid,nm){d<-fread(sprintf("%s/fid%s.csv",D,fid)); data.table(IID=as.integer(d[[1]]), x=as.Date(as.character(d[[2]])))[,setNames(.SD,c("IID",nm))]}
 base<-rd("53","base"); cad<-rd("131306","cad"); dth<-rd("40000","death")
 cov <- fread("/path/to/cad-genetics/results/agent1_genetics/phenotypes/covariates.txt")
