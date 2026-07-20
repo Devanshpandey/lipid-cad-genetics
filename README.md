@@ -62,6 +62,7 @@ in `scripts/agent1_genetics/strengthen/`:
 | Cross-ancestry MR + MR-PRESSO / pleiotropy-robust sensitivity | `strengthen/multiancestry_mr_sens.R`, `job_ma_sens.slurm` |
 | Cross-ancestry instrument transferability | `strengthen/job_xanc_scatter.slurm` |
 | MR-BMA (Bayesian model averaging) + prior sensitivity | `strengthen/mrbma_discordant.R`, `mrbma_prior_sens.R` |
+| NMR LDL particle-number vs cholesterol separation (LDSC r_g + two-trait MVMR) | `strengthen/run_nmr_separation.sh`, `nmr_mvmr.R`, `job_nmr_separation.slurm` |
 | *cis*-eQTL colocalization (GTEx v8 / eQTL Catalogue) | `strengthen/job_eqtl_coloc.slurm` |
 | coloc.susie + SuSiE credible-set (L) sensitivity | `strengthen/coloc_susie.R`, `coloc_lean.R`, `susie_L_sensitivity.R` |
 | Convergence-score layer ablation & weight sensitivity | `strengthen/ablation.R`, `score_sensitivity.R` |
