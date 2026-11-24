@@ -1,0 +1,7 @@
+commit 62b1861
+job 3602201
+date Sat Nov 21 11:04:37 CST 2026
+bdd4cd26b171756c65b104a53d063ec2  /path/to/cad-genetics/scripts/agent1_genetics/lpa_susceptibility/lpa_susceptibility.R
+bfad4277288f93c091769bfb7c447b61  /path/to/cad-genetics/scripts/agent6_resilience/R/lib_synergy.R
+e3859ff7aae063e10a57f402d7b1bb52  /path/to/cad-genetics/scripts/agent6_resilience/R/lib_resilience.R
+6e1c268df17113e7959d4078ee830b64  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_horizon.R

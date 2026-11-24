@@ -1,0 +1,5 @@
+commit 8cc1ada
+job 3602413
+date Sat Nov 21 12:20:19 CST 2026
+b163c8dfcadb9a0b5a2c162f88f93fad  /path/to/cad-genetics/scripts/agent1_genetics/lpa_susceptibility/lpa_susceptibility_posthoc.R
+bdd4cd26b171756c65b104a53d063ec2  /path/to/cad-genetics/scripts/agent1_genetics/lpa_susceptibility/lpa_susceptibility.R

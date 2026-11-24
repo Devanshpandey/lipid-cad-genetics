@@ -1,0 +1,43 @@
+commit ef8496d4ffbf234a89a6fcdf12271e1c5aab8d8e
+author date 2026-11-05T16:08:09-06:00
+commit date 2026-11-05T16:08:09-06:00
+
+docs(nature-round): amend C so the NMR arm reads the published instruments
+
+Recorded after the real C result (UNRESOLVED) was read, at the author's
+instruction, and before the change is implemented or rerun. The NMR arm failed
+its control because it reselected instruments; Table oS3b came from
+exports/agent1/nmr_gencov/nmr_mvmr_snps.csv, so the arm will read that file
+(CARDIoGRAM only: the file has no alleles). Verdict rule unchanged.
+
+Prediction written here before the rerun: on the published estimates the NMR
+contrast is about -1.28, opposite to the biochemistry arm, so the label is
+expected to stay UNRESOLVED (disagreement across arms), not become CONTRADICTS.
+
+Co-Authored-By: Claude Opus 5.5 
+
+
+diff --git a/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md b/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
+index 914a90b..3b946ac 100644
+--- a/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
++++ b/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
+@@ -79,3 +79,19 @@ real start is 401,743. Everything else stays a hard stop: the four interaction a
+ estimates against the manuscript (to 2 dp, plus the 5-dp full-precision pair), and the counts n,
+ events, statin users, events in statin users and the prevalent exclusion, which come from a prior run
+ of the paper's own script and so verify reproduction of that run, not agreement with a printed table.
++
++**C, the NMR arm reads the published instrument file.** Recorded 2026-11-05, AFTER the real C result
++(job 3549234, verdict UNRESOLVED) had been read, at the author's instruction. In that run the NMR arm
++reselected instruments from the archived per-chromosome GWAS with this script's distance-only clump and
++failed its positive control (LDL-P 2.94 and LDL-C(NMR) 0.536 against the published 2.48 and 0.69), so
++the arm counted as invalid. Supplementary Table oS3b was produced from
++exports/agent1/nmr_gencov/nmr_mvmr_snps.csv (62 harmonised instruments, CARDIoGRAM outcome, 2026-09-16),
++so the arm now reads that file. The reason is faithfulness to the published analysis, not direction.
++That file carries no alleles, so FinnGen cannot be harmonised to it and the NMR arm has the CARDIoGRAM
++outcome only. The control target is the export's full-precision MVMR-IVW estimate (LDL-P 2.47578,
++LDL-C(NMR) 0.686485). The verdict rule is unchanged.
++Written before the rerun: on the published estimates the NMR contrast LDL-C(NMR) minus LDL-P is about
++-0.371 - 0.907 = -1.28, the opposite sign to the biochemistry arm's positive set. The rule counts a
++secondary arm whose qhet point estimate has the opposite sign as disagreement, so this change is expected
++to leave the label at UNRESOLVED, now for disagreement across arms rather than for a missing arm, and
++not to produce CONTRADICTS.

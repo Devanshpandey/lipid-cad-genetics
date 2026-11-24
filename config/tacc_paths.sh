@@ -51,6 +51,12 @@ UKB_GENO_STEP1="${UKB_GENO_ROOT}/merged_maf0.01_biallel_bbf_400k/merged_sub_chro
 # QC-passed white British EID list (one EID per line, no header)
 UKB_SAMPLE_EID="${UKB_GENO_ROOT}/geno_qc_eids_400k_white_british_2023-11-29.txt"
 
+# Export the genotype paths. Without this they are shell variables only, so any
+# child process (Rscript, python) sees "" — which is exactly how run_coloc.R
+# came to call PLINK with an empty --bfile and silently fall back to a broken
+# sentinel heuristic. Keep this export next to the assignments above.
+export UKB_GENO_ROOT UKB_GENO_STEP1 UKB_GENO_STEP2 UKB_SAMPLE_EID
+
 # ---------------------------------------------------------------
 # UKB WES DATA  (corral-repl — read-only, all-chr merged pgen)
 # Confirmed path: /path/to/ukb_wes/

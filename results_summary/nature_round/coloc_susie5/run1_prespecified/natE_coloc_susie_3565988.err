@@ -1,0 +1,76 @@
+Warning message:
+package ‘data.table’ was built under R version 4.2.3 
+== PCSK9 (LDL_C, control) ==
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+== LDLR (LDL_C, control) ==
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: FALSE
+running max iterations: 10000
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+Warning message:
+In susie_suff_stat(XtX = XtX, Xty = Xty, n = n, yty = (n - 1) *  :
+  IBSS algorithm did not converge in 100 iterations!
+                  Please check consistency between summary statistics and LD matrix.
+                  See https://stephenslab.github.io/susieR/articles/susierss_diagnostic.html
+== SORT1/CELSR2 (LDL_C, primary) ==
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+== APOE/APOC1 (LDL_C, primary) ==
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: FALSE
+running max iterations: 10000
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+== TRIB1 (LDL_C, primary) ==
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+== TRIB1 (TRIGLY, sensitivity) ==
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+running max iterations: 100
+HINT: For large R or large XtX, consider installing the Rfast package for better performance.
+	converged: TRUE
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+WARNING: The matrix R is not positive semidefinite. Negative eigenvalues are set to zero
+Warning messages:
+1: In check_dataset(d, suffix, req = c("beta", "varbeta", "LD", "snp",  :
+  minimum p value is: 0.0011651
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette.
+2: In susie_suff_stat(XtX = XtX, Xty = Xty, n = n, yty = (n - 1) *  :
+  IBSS algorithm did not converge in 100 iterations!
+                  Please check consistency between summary statistics and LD matrix.
+                  See https://stephenslab.github.io/susieR/articles/susierss_diagnostic.html

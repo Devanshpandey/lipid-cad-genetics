@@ -1,0 +1,183 @@
+commit 238b4c38c1dbbcc8869763a689b449d7cdebd439
+author date 2026-11-20T19:26:24-06:00
+commit date 2026-11-20T19:26:24-06:00
+
+feat(lpa-horizon): pre-register the genetic emulation of Lp(a)HORIZON
+
+Readout rules, analysis script and job scripts for testing whether the genetic
+effect of Lp(a) persists once vascular disease is established, with the LDL-C
+score as positive control. Committed before any exposure-outcome estimate for
+established disease exists: only cohort and event counts (LS6 job 3600440) and
+the synthetic self-test (job 3600625, 46 checks) have been run.
+
+Co-Authored-By: Claude Fable 5.2 
+
+
+diff --git a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+new file mode 100644
+index 0000000..761e188
+--- /dev/null
++++ b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+@@ -0,0 +1,162 @@
++# Genetic emulation of Lp(a)HORIZON: pre-registered readout
++
++Written 2026-11-20, before any estimate relating Lp(a) genotype to a later event in
++people with established disease exists in this project. The code that implements these
++rules is `lpa_horizon.R` in this folder (`verdict()` is the section "Verdict" below).
++
++## Question
++
++Genetically higher Lp(a) raises the risk of a first vascular event. Lp(a)HORIZON lowered
++Lp(a) by a time-averaged 144 nmol/L for a median 4.7 years in people with established
++disease and found no benefit (hazard ratio 1.02, 95% CI 0.90 to 1.15; Cho et al., NEJM
++2026, doi 10.1056/NEJMoa2610159). Does the genetic effect of Lp(a) persist once disease
++is established, which is the population the trial treated?
++
++## What had been seen when this was written
++
++- Counts and exposure distributions only (`feas_counts.R`, LS6 job 3600440): 16,955
++  participants with established disease and 4,790 later events; predicted-Lp(a) SD
++  59.6 nmol/L. That job never tabulated an outcome against Lp(a) or genotype.
++- The published result for the paper's Lp(a) score on incident CAD in people free of CAD
++  (hazard ratio 1.096 per SD, 1.083 to 1.110; 379,896 participants, 32,053 events).
++- Published work by others: Zewinger et al. 2017 (doi 10.1016/S2213-8587(17)30096-7), no
++  association of two *LPA* variants with mortality in 106,353 patients with established
++  coronary disease; Patel et al. 2019 (doi 10.1161/CIRCGEN.119.002471), 9p21 odds ratio
++  1.02 for subsequent coronary death or infarction against 1.20 for first events.
++
++## Data and definitions
++
++Cohort: the manuscript's unrelated European-ancestry set with *LPA* dosages and a
++baseline assessment date (402,119). Follow-up ends at death, loss to follow-up or
++2022-10-31.
++
++Hospital data on LS6 hold the first date of each distinct code only. A later event of
++the same type is therefore visible only under a different 4-character code; new event
++types, new procedure codes and deaths are complete.
++
++| Cohort | Definition |
++|---|---|
++| A, established disease (primary) | Before baseline: myocardial infarction (ICD-10 I21 to I23, I25.2; first-occurrence and algorithmic fields; self-report), ischaemic stroke (I63, I64; same sources) or peripheral artery disease (I70.2, I73.8, I73.9, I74.3 to I74.5; self-report). These are the trial's three qualifying conditions. |
++| C, primary prevention | None of A, nor angina, other chronic coronary disease, coronary revascularization, TIA or unspecified stroke before baseline. |
++| C standardized | C weighted to the age band (under 45, 45 to 49, 50 to 54, 55 to 59, 60 to 64, 65 and over) by sex mix of A. This is the comparator for the primary readout. |
++| D, replication | Members of C with a first infarction or ischaemic stroke during follow-up who survive 30 days, followed from day 30. Disjoint from A. |
++| B, sensitivity | Any vascular disease before baseline (A plus the conditions excluded from C). |
++
++Endpoint: first of cardiovascular death (underlying cause ICD-10 chapter I), myocardial
++infarction (I21, I22), ischaemic stroke (I63, I64) or coronary revascularization (OPCS-4
++K40 to K46, K49, K50, K75) after time zero. Urgent and elective revascularization cannot
++be told apart. Primary analysis uses all follow-up; a five-year horizon is the
++trial-matched secondary analysis.
++
++Exposures, all oriented so that a positive coefficient means higher risk:
++
++- **Lp(a):** genotype-predicted Lp(a) in nmol/L from a censored-normal model (left-censored
++  at 3.8, right-censored at 189, using the reportability field) fitted jointly on the 45
++  *LPA* cis variants. Coefficients are per 144 nmol/L higher; results are also printed per
++  144 nmol/L lower, the trial's direction.
++- **LDL-C (positive control):** the paper's 167-variant LDL-C score, per SD. Lowering LDL-C
++  after a first event is proven to reduce later events, so a design that cannot see this
++  score in cohort A cannot be read for Lp(a).
++- **Non-lipid CAD polygenic score (comparator, not in the verdict):** the UK Biobank-free
++  CAD score restricted to variants more than 500 kb from any ApoB locus, per SD.
++
++Model: Cox regression on time since time zero with the three exposures together, age,
++sex and ten ancestry principal components. Cohort C standardized uses the weights above
++with a robust variance.
++
++## Gates (no estimate is read if any fails)
++
++1. Cohort A size, its event count and cohort C size equal the feasibility job's counts.
++2. Exposure model: no variant dropped, rs10455872 between 100 and 120 nmol/L per allele,
++   r2 above 0.45 against in-range measurements.
++3. The published Lp(a) score model reproduces: 379,896 participants, 32,053 events,
++   hazard ratio 1.096 (1.083 to 1.110) to three decimals.
++4. The synthetic self-test passes in full (data-assembly fixture, censored model,
++   planted effects, every verdict branch).
++
++Status of gate 4 at the first commit: LS6 job 3600625, 46 checks passed, script md5
++`6e1c268df17113e7959d4078ee830b64`. Planted against recovered log hazard ratios for Lp(a)
++in established disease: 0.00 against 0.042 (SE 0.039), 0.25 against 0.193 (SE 0.037),
++0.00 against -0.007 (SE 0.039); the three scenarios returned the three intended verdicts.
++
++## Primary readout
++
++For each exposure, b_A is the log hazard ratio in cohort A and b_C in cohort C
++standardized. A and C share no participants, so their estimates are independent.
++
++- **Anchor:** b_C above 0 with one-sided P below 0.001, for Lp(a) and for LDL-C.
++- **Present:** b_A above 0 with one-sided P below 0.025.
++- **Attenuated:** b_A below b_C with two-sided P below 0.05 for the difference.
++- **Specific:** the ratio b_A / b_C is smaller for Lp(a) than for LDL-C, one-sided P
++  below 0.05 (delta method).
++
++## Verdict
++
++| Lp(a) in established disease | LDL-C control present in A | Lp(a) more attenuated than LDL-C | Verdict |
++|---|---|---|---|
++| anchor fails for either exposure | | | NO_ANCHOR |
++| present, not attenuated | any | any | GENETICS_DOES_NOT_REPRODUCE_TRIAL |
++| present, attenuated | any | any | PARTIAL_PERSISTENCE |
++| not present, not attenuated | any | any | INDETERMINATE |
++| not present, attenuated | no | any | UNINFORMATIVE_DESIGN |
++| not present, attenuated | yes | yes | STAGE_SPECIFIC_FOR_LPA |
++| not present, attenuated | yes | no | ATTENUATED_NOT_SPECIFIC |
++
++How each is to be written up:
++
++- **STAGE_SPECIFIC_FOR_LPA:** Lp(a) genotype predicts first events but not later ones,
++  while LDL-C genotype predicts both. Genetics agrees with the trial when asked the
++  trial's question.
++- **ATTENUATED_NOT_SPECIFIC:** the Lp(a) effect is gone and the LDL-C effect is still
++  detectable, but the data do not show that Lp(a) lost more. Report as consistent with the
++  trial, not as specific to Lp(a).
++- **UNINFORMATIVE_DESIGN:** a proven-treatable exposure is also invisible, so selection
++  on having survived a first event, or loss of first-event genetics in general, explains
++  the result. Nothing is concluded about Lp(a).
++- **PARTIAL_PERSISTENCE** and **GENETICS_DOES_NOT_REPRODUCE_TRIAL:** the genetic effect
++  persists, so the trial result is not explained by disease stage; treatment duration or
++  the intervention remain.
++- **INDETERMINATE** and **NO_ANCHOR:** no conclusion.
++
++A flag `bias_material` is added to any verdict when the selection bias implied by
++measured factors left out of the primary model (BMI, smoking, diabetes, hypertension)
++exceeds a quarter of b_C for Lp(a). The bias is the sum over factors of (slope of the
++factor on predicted Lp(a) in A minus the same slope in C) times the factor's log hazard
++ratio in A. Unmeasured factors cannot be bounded this way and this is a stated limit.
++
++## Secondary analyses (reported in full, no verdict)
++
++Five-year horizon in cohort A, as a hazard ratio per 144 nmol/L lower with its
++confidence interval and a test against the trial's estimate; cohorts D and B; A and D
++pooled; cohort C unweighted; prior infarction, stroke and peripheral disease separately;
++three-point composite and each component; one exposure per model; the paper's Lp(a) score
++in place of predicted Lp(a); adjustment for the four risk factors; statin users in A;
++proportional-hazards test for Lp(a) in A.
++
++## Limits fixed in advance
++
++- Genotype differences are lifelong, including before the first event. A null in cohort A
++  is therefore stronger evidence than the trial's; a positive result would not separate
++  treatment duration from the intervention.
++- Most of cohort A has Lp(a) below the trial's entry range (1,845 have a measured value
++  above 189 nmol/L), so the estimate is a per-nmol/L effect across the whole range. A
++  threshold effect at very high Lp(a) cannot be excluded.
++- Later infarctions are under-counted (first date per code), cohort A was less
++  intensively treated than the trial's patients (median LDL-C 2.7 against about 1.7
++  mmol/L), and participants are of European ancestry.
++- No external replication cohort is available.
++
++## Prediction, written before the run
++
++Lp(a) will be attenuated in cohort A (the 2017 mortality result points that way). I am
++unsure the LDL-C control will be detected, because nearly four in five of cohort A take
++cholesterol-lowering drugs. The most likely verdicts are ATTENUATED_NOT_SPECIFIC or
++UNINFORMATIVE_DESIGN; STAGE_SPECIFIC_FOR_LPA would be the most useful and I give it
++about one chance in four.
++
++## Deviations
++
++Any change after this file is committed is listed here with its date, its reason and
++whether an estimate had been seen.
++
++- None at the time of the first commit.

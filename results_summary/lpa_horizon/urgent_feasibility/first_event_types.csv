@@ -1,0 +1,4 @@
+cohort,four_point_events,first_cv_death,first_infarction,first_ischaemic_stroke,first_revascularization_alone,alone_acute_linked_7d,alone_acute_linked_8_to_30d,alone_not_acute_linked,alone_pct_of_four_point
+established disease at baseline (cohort A),4790,1023,1598,1048,1121,127,16,978,23.4029227557411
+before a first event (cohort C),24875,3635,10144,6688,4408,529,98,3781,17.7206030150754
+from 30 days after a first event in follow-up (cohort D),2584,594,712,643,635,66,16,553,24.5743034055728

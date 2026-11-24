@@ -1,0 +1,4 @@
+cohort,n,revasc_any,revasc_any_5y,acute_linked_7d,acute_linked_14d,acute_linked_30d,acute_linked_7d_5y,acute7_infarction,acute7_unstable_angina,acute7_other,not_acute_linked_30d,three_point,four_point_any_revasc,four_point_acute7,four_point_acute30,three_point_5y,four_point_any_revasc_5y,four_point_acute7_5y,prior_revasc_code_pct,prior_acute_code_pct
+established disease at baseline (cohort A),16955,1962,861,786,857,902,296,589,141,68,1180,3997,4790,4078,4089,1334,1842,1393,24.5001474491301,32.2972574461811
+before a first event (cohort C),371735,10482,3406,5808,6137,6345,1760,4724,783,364,4507,21517,24875,21825,21888,5129,6625,5303,0,0
+from 30 days after a first event in follow-up (cohort D),16726,996,883,380,407,426,317,295,64,26,601,2040,2584,2093,2109,1547,2086,1601,37.0082506277652,48.1944278369006

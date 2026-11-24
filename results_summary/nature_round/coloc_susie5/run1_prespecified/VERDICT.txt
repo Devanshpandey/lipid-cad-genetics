@@ -1,0 +1,9 @@
+reproduction control (PCSK9, LDLR vs published table): PASS
+alignment identical to coloc_lean.R at every locus: TRUE
+every primary locus returned a coloc.susie result: FALSE -> remove the coloc.susie column from panel a
+  PCSK9         LDL_C  max PP.H4 1.000 (1 of 9 pairs >0.8; 9 LDL_C / 1 CAD sets)
+  LDLR          LDL_C  max PP.H4 0.936 (2 of 10 pairs >0.8; 10 LDL_C / 1 CAD sets)
+  SORT1/CELSR2  LDL_C  max PP.H4    NA (0 of 0 pairs >0.8; 9 LDL_C / 0 CAD sets)
+  APOE/APOC1    LDL_C  max PP.H4 0.997 (2 of 20 pairs >0.8; 10 LDL_C / 2 CAD sets)
+  TRIB1         LDL_C  max PP.H4 0.986 (2 of 10 pairs >0.8; 10 LDL_C / 1 CAD sets)
+  TRIB1         TRIGLY max PP.H4 0.986 (2 of 10 pairs >0.8; 10 TRIGLY / 1 CAD sets)

@@ -75,3 +75,13 @@ __pycache__/
 !*.yaml
 !LICENSE
 !.gitignore
+
+# Summary-level outputs kept with the code: no individual-level data, no count from 1 to 4
+!results_summary/
+!results_summary/**
+!protocols/history/commits.tsv
+!CODE_MD5.tsv
+!TABLE_SOURCES.tsv
+!scripts/figures_nature/INPUTS.tsv
+!scripts/figures_nature/figure_data/
+!scripts/figures_nature/figure_data/**

@@ -1,0 +1,6 @@
+gate,value,target,pass
+"acute-linked revascularizations, cohort A",786,786,TRUE
+"other revascularizations, cohort A",1180,1180,TRUE
+"matched composite events, cohort A",4078,4078,TRUE
+four-point Lp(a) coefficient of record,0.174533790354549,0.174533790354549,TRUE
+three-point Lp(a) coefficient of record,0.101635091628793,0.101635091628793,TRUE

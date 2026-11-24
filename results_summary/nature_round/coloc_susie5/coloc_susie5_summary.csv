@@ -1,0 +1,7 @@
+locus,exposure,role,chr,centre_snp,centre_bp,sentinel_snp,lead_ldl_snp,window_contains_lead,recentred,window_kb,nsnp,n_signals_exposure,n_signals_CAD,n_pairs_tested,n_coloc_pairs_PP4gt0.8,max_PP.H4,hit_exposure_at_max,hit_CAD_at_max,max_log10P_exposure,max_log10P_CAD,s_rss_exposure,s_rss_CAD,n_missing_from_bim,n_duplicate_bim_ids,n_allele_flipped,n_allele_dropped,n_dropped_ld_na,alignment_as_coloc_lean
+PCSK9,LDL_C,control,1,"",55505647,rs11591147,rs11591147,TRUE,FALSE,120,1411,9,1,9,1,1,rs11591147,rs11591147,428.8,10.6,0.0211,0.0057,0,0,0,0,0,TRUE
+LDLR,LDL_C,control,19,"",11197598,rs10423733,rs73015024,TRUE,FALSE,120,1486,10,1,10,2,0.936,rs73015024,rs17248720,660.6,9.5,0.0935,0.0119,0,0,0,0,0,TRUE
+SORT1/CELSR2,LDL_C,primary,1,rs12740374,109817590,rs4970834,rs12740374,FALSE,TRUE,120,1071,1,1,1,1,0.856,rs12740374,rs602633,534.7,16.2,0.0131,0.0068,0,0,0,0,0,TRUE
+APOE/APOC1,LDL_C,primary,19,rs429358,45411941,rs531660643,rs7412,TRUE,FALSE,120,1425,10,2,20,2,0.997,rs7412,rs1065853,3313.8,14,0.0453,0.0152,0,0,0,0,0,TRUE
+TRIB1,LDL_C,primary,8,rs28601761,126500031,rs28601761,rs28601761,TRUE,FALSE,120,1277,10,1,10,2,0.986,rs28601761,rs112875651,216.9,8,0.0494,0.0154,0,0,0,0,0,TRUE
+TRIB1,TRIGLY,sensitivity,8,rs28601761,126500031,rs28601761,rs28601761,TRUE,FALSE,120,1277,10,1,10,2,0.986,rs28601761,rs112875651,449,8,0.0915,0.0154,0,0,0,0,0,TRUE

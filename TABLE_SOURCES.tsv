@@ -1,0 +1,52 @@
+printed_as	working_file	output_file_with_the_same_values	share_of_values_found	code
+Supplementary Data 1	TableS2b_ldsc_rg_lipid_pairs.csv	ldsc_rg_lipids_vs_lipids.csv	1.00	scripts/agent1_genetics/slurm/06_ldsc_rg.slurm
+Supplementary Data 2	TableS27b_eqtl_coloc_ldl_apob.csv	qtl_coloc/cis_eqtl_coloc_v2.csv	1.00	scripts/agent1_genetics/R/run_qtl_coloc.R; scripts/agent1_genetics/coloc_runs/eqtl/run_eqtl.sh
+Supplementary Data 3	TableS3c_identifiability.csv	mvmr_apob_gencov/TableS3c_identifiability.csv	1.00	scripts/agent1_genetics/analysis/condf_build.py; scripts/agent1_genetics/slurm/08u_apob_gencov.slurm, 08v, 08w
+Supplementary Data 4	TableS39b_subtype_heterogeneity.csv	revision/stroke_subtype_contrasts_heterogeneity.csv	1.00	scripts/agent1_genetics/R/stroke_subtype_contrasts.R; scripts/agent1_genetics/slurm/08l, 08n or 08p (same output name)
+Supplementary Data 5	TableS34b_statin_robustness.csv	statin_robustness_fixed.csv	1.00	scripts/agent1_genetics/R/statin_interaction_robustness.R; scripts/agent1_genetics/slurm/statin_robustness_rerun.sh
+Supplementary Data 6	TableS29_pde3b_variants.csv	strengthen/pde3b_lovo.csv	1.00	scripts/agent1_genetics/strengthen/job_pde3b_diag.slurm
+Supplementary Data 7	TableS18_l2g_benchmark.csv	strengthen/l2g_benchmark.csv	1.00	scripts/agent1_genetics/strengthen/l2g_benchmark.R
+Supplementary Data 8	TableS21_score_weight_sensitivity.csv	not identified by value		scripts/agent1_genetics/convergence_score/score_sensitivity.R (by reading)
+Supplementary Data 9	gene_ranking_scores.csv	convergence_fix/gene_ranking_scores_corrected.csv	identical file	scripts/agent1_genetics/convergence_score/recompute.py
+Supplementary Data 10	pde3b_consequence_class.csv	strengthen/pde3b_consequence_class.csv	identical file	not identified
+Supplementary Data 11	TableS34c_statin_ph.csv	statin_robustness_fixed_ph.csv	1.00	scripts/agent1_genetics/R/statin_interaction_robustness.R; scripts/agent1_genetics/slurm/statin_robustness_rerun.sh
+Supplementary Table 1	TableS1_cohort_phenotypes.csv	not identified by value		scripts/agent1_genetics/R/prep_phenotypes.R (by reading)
+Supplementary Table 2	TableS3b_mvmr_apob.csv	mvmr_apob_prunefix/mvmr_apob_{CAD,MI,MACE}.csv	0.35 in each of the three files	scripts/agent1_genetics/R/run_mvmr_apob.R; scripts/agent1_genetics/slurm/08h_rerun_after_pruning_fix.slurm
+Supplementary Table 3	TableS17_apob_ldl_residuals.csv	revision/apob_ldl_shared_discordant.csv	1.00	scripts/agent1_genetics/R/apob_ldl_shared.R; scripts/agent1_genetics/slurm/08k_apob_shared.slurm
+Supplementary Table 3	TableS17_apob_ldl_summary.csv	revision/apob_ldl_shared.csv	1.00 at three digits (8 values)	scripts/agent1_genetics/R/apob_ldl_shared.R; scripts/agent1_genetics/slurm/08k_apob_shared.slurm
+Supplementary Table 7	TableS2_ldsc_rg.csv	ldsc_rg_lipids_vs_outcomes.csv	1.00	scripts/agent1_genetics/slurm/06_ldsc_rg.slurm
+Supplementary Table 8	TableS3_mvmr.csv	mvmr_prunefix/mvmr_<endpoint>.csv	CAD file checked: identical	scripts/agent1_genetics/R/run_mvmr.R; scripts/agent1_genetics/slurm/08h_rerun_after_pruning_fix.slurm
+Supplementary Table 13	TableS49_stage_estimates.csv	lpa_horizon/emulation/estimates.csv	copied by the build	scripts/agent1_genetics/lpa_horizon/lpa_horizon.R
+Supplementary Table 14	TableS54_revascularization_difference.csv	lpa_horizon/matched_endpoint/revascularization_difference.csv	copied by the build	scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc3.R
+Supplementary Table 14	TableS54_trial_proxy_estimates.csv	lpa_horizon/matched_endpoint/matched_estimates.csv	copied by the build	scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc3.R
+Supplementary Table 14	TableS54_trial_proxy_predictions.csv	lpa_horizon/matched_endpoint/matched_predictions.csv	copied by the build	scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc3.R
+Supplementary Table 15	TableS51_dose_shape.csv	lpa_horizon/posthoc2/linearity_shape.csv	copied by the build	scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc2.R
+Supplementary Table 16	TableS50_ldl_scale.csv	lpa_horizon/posthoc2/calibration_statin.csv	copied by the build	scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc2.R
+Supplementary Table 17	TableS52_forecasts.csv	lpa_horizon/forecast/forecasts.csv	copied by the build	scripts/agent1_genetics/lpa_horizon/lpa_forecast.R
+Supplementary Table 18	TableS39_subtype_contrasts.csv	revision/stroke_subtype_contrasts_contrasts.csv	1.00	scripts/agent1_genetics/R/stroke_subtype_contrasts.R; scripts/agent1_genetics/slurm/08l, 08n or 08p (same output name)
+Supplementary Table 19	TableS36_stroke_subtype_mr.csv	stroke_prunefix/mr_{AS,AIS,LAS,CES,SVS}.csv	0.20 in each of the five files	scripts/agent1_genetics/R/run_external_mr.R; scripts/agent1_genetics/slurm/08h_rerun_after_pruning_fix.slurm
+Supplementary Table 20	TableS37_endpoint_contrasts.csv	mvmr_covariance_prunefix_contrasts.csv	1.00	scripts/agent1_genetics/R/mvmr_covariance.R; scripts/agent1_genetics/slurm/08h_rerun_after_pruning_fix.slurm
+Supplementary Table 23	TableS7_finngen_mvmr.csv	mvmr_finngen_prunefix.csv	1.00	scripts/agent1_genetics/R/run_external_mr.R; scripts/agent1_genetics/slurm/08h_rerun_after_pruning_fix.slurm
+Supplementary Table 24	TableS23_mr_cardiogram.csv	mr_cardiogram_prunefix.csv	1.00	scripts/agent1_genetics/R/run_external_mr.R; scripts/agent1_genetics/slurm/08h_rerun_after_pruning_fix.slurm
+Supplementary Table 25	TableS32_drug_target_cis_MR.csv	revision/cis_mr_corrected.csv	0.96	scripts/agent1_genetics/R/run_cis_mr.R; scripts/agent1_genetics/slurm/08m_cis_mr.slurm; scripts/figures_nature/regen_cismr_artifacts.py
+Supplementary Table 26	TableS26_multiancestry_mr.csv	strengthen/multiancestry_mr/*.csv	1.00	scripts/agent1_genetics/strengthen/multiancestry_mr.R, multiancestry_mr_sens.R
+Supplementary Table 27	TableS24_transancestry_transferability.csv	not identified by value		scripts/agent1_genetics/strengthen/job_xanc_scatter.slurm (by reading)
+Supplementary Table 28	TableS4_coloc_loci.csv	coloc_clump/out/*_coloc.csv	1.00	scripts/agent1_genetics/R/run_coloc.R; scripts/agent1_genetics/coloc_runs/ld_clumped/run_clump_coloc.slurm; scripts/agent1_genetics/coloc_runs/export_coloc.py
+Supplementary Table 29	TableS9_finngen_coloc.csv	fgcoloc/finngen_coloc_results.csv	1.00	scripts/agent1_genetics/coloc_runs/fgcoloc.R (as found with the output); scripts/agent1_genetics/replication/finngen_colocalization.sh (public since July)
+Supplementary Table 30	TableS6_rvas_siggenes.csv	not identified by value		scripts/agent1_genetics/slurm/03b_burden_test.slurm (by reading)
+Supplementary Table 31	TableS15_lipid_lowering_targets.csv	strengthen/lipid_lowering_targets_burden.csv	1.00	not identified
+Supplementary Table 32	TableS25_koyama_multiancestry_concordance.csv	not identified by value		no script found
+Supplementary Table 34	TableS4b_coloc_sensitivity.csv	coloc_dist/out/*_coloc.csv	1.00	scripts/agent1_genetics/R/run_coloc.R; scripts/agent1_genetics/coloc_runs/distance_pruned/run_all.sh
+Supplementary Table 36	TableS42_cis_pqtl_coloc.csv	pqtl2/decode_coloc_results_v2.csv and ukbppp_coloc_results_v2.csv	0.48 and 0.52	scripts/agent1_genetics/decode_coloc_v2.py, ukbppp_coloc_v2.py; scripts/agent1_genetics/coloc_runs/pqtl/run_dec.sh, run_ppp.sh
+Supplementary Table 37	TableS5_finemapping.csv	finemap_rerun/out/*.csv	1.00	scripts/agent1_genetics/R/run_finemapping.R; scripts/agent1_genetics/coloc_runs/finemap_rerun.slurm
+Supplementary Table 38	TableS16_coloc_susie.csv	nature_round/coloc_susie5/coloc_susie5_summary.csv	1.00	scripts/agent1_genetics/nature_round/nat_coloc_susie_5loci.R
+Supplementary Table 39	TableS27_cis_eqtl_coloc.csv	strengthen/eqtl_coloc/cis_eqtl_coloc.csv	1.00	scripts/agent1_genetics/strengthen/job_eqtl_coloc.slurm
+Supplementary Table 41	TableS14_canonical_positive_set.csv	not identified by value		no script found
+Supplementary Table 42	TableS12_score_vs_burden.csv	not identified by value		scripts/agent1_genetics/convergence_score/prauc.R, metrics.py (by reading)
+Supplementary Table 43	TableS19_layer_ablation.csv	not identified by value		scripts/agent1_genetics/convergence_score/ablation_corrected.R (by reading)
+Supplementary Table 44	TableS8_convergence_scores.csv	convergence_fix/gene_ranking_scores_corrected.csv	1.00 at three digits	scripts/agent1_genetics/convergence_score/recompute.py
+Supplementary Table 47	TableS43_pde3b_t2d.csv	not identified by value		scripts/agent1_genetics/pde3b/pde3b_t2d.R, scripts/agent1_genetics/slurm/11b_t2d_step2.slurm (by reading)
+Supplementary Table 48	TableS13_pde3b_phewas.csv	strengthen/pde3b_phewas.csv	1.00	scripts/agent1_genetics/strengthen/pde3b_phewas.R
+Supplementary Table 49	TableS20_pde3b_cox_cad.csv	strengthen/pde3b_cox_cad.csv	1.00	scripts/agent1_genetics/strengthen/pde3b_cox.R
+Supplementary Table 50	TableS22_stratified_auroc.csv	not identified by value		scripts/agent1_genetics/convergence_score/metrics.py (by reading)
+Supplementary Table 53	TableS53_susceptibility.csv	lpa_susceptibility/product_terms.csv	copied by the build	scripts/agent1_genetics/lpa_susceptibility/lpa_susceptibility.R

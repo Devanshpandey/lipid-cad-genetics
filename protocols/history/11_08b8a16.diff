@@ -1,0 +1,180 @@
+commit 08b8a16caad26c55c6cd78c43c1f28dbae484235
+author date 2026-11-21T15:11:50-06:00
+commit date 2026-11-21T15:11:50-06:00
+
+feat(lpa-horizon): record the further post hoc outcomes and declare the matched-endpoint analysis
+
+Adds the outcome of post hoc checks P3-P6 to the protocol document, the counts-only
+feasibility job for an urgent-revascularization stand-in, and the declaration, reading
+and written expectation of the matched-endpoint analysis, before any of its estimates
+exists. The analysis script passed its synthetic self-test (LS6 job 3602910, 21 checks).
+
+Co-Authored-By: Claude Fable 5.2 
+
+
+diff --git a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+index 8bef974..9efaa21 100644
+--- a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
++++ b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+@@ -246,7 +246,7 @@ has the same association with the four-point composite as 0.78 mmol/L of LDL-C (
+ roughly 0.6 to 1.1 mmol/L depending on the paper and the mass-to-molar conversion: the
+ check passes. In cohort A the equivalence is 0.36 mmol/L (0.19 to 0.73) on measured
+ LDL-C and 0.63 (0.33 to 1.28) statin-corrected. Predicted hazard ratio for a trial
+-lowering Lp(a) by 144 nmol/L, four-point composite with any revascularization: 0.92
++lowering Lp(a) by 144 nmol/L, four-point composite with any revascularization: 0.91
+ (0.83 to 0.95) on measured LDL-C and 0.86 (0.73 to 0.92) statin-corrected; stratified
+ 0.91 and 0.85. Against the trial's 1.02 (0.90 to 1.15): P 0.13 and 0.04 pooled, 0.14 and
+ 0.07 stratified. The uncalibrated lifelong estimate was 0.84 (P 0.006 against the trial).
+@@ -254,7 +254,7 @@ Five-year calibrations are uninformative (the LDL-C score's five-year effect in
+ imprecise; Fieller intervals very wide or unbounded).
+ 
+ **Reading.** Adjusting for the qualifying condition does not change the result. Allowing
+-for treatment duration moves the genetic prediction from 0.84 to roughly 0.85 to 0.92,
++for treatment duration moves the genetic prediction from 0.84 to roughly 0.85 to 0.91,
+ which the trial's interval partly covers; the trial's endpoint also excluded elective
+ revascularization, where the genetic effect is largest. The remaining disagreement with
+ the trial is borderline and depends on how statin-treated LDL-C is scaled.
+@@ -317,3 +317,143 @@ revascularization.
+ 
+ **External replication** is not attempted: it needs individual-level genotypes and
+ follow-up after disease onset in a second cohort, which is not held on LS6.
++
++## Outcome of the further post hoc analyses
++
++Run 2026-11-20 at commit `eae5689` (LS6 job 3600852; self-test job 3600851, 20 checks;
++all 13 gates re-checked and passed). Tables in `exports/agent1/lpa_horizon/posthoc2/`.
++The verdict of record is unchanged.
++
++**P3. Stroke.** Atrial fibrillation before baseline: 9.1% of cohort A, 1.2% of cohort C.
++(a) Unmodelled measured factors imply a bias of -0.016 in the stroke log hazard ratio
++(diabetes -0.008, systolic pressure -0.008), against an observed -0.15: the same sign,
++about a tenth of the size. (b) Adjusting for the factors: 0.83 to 0.85 (stratified, same
++15,558 participants), no material change. (c) Stroke as a first event, 1,116 of the
++1,267 strokes: 0.90 (0.77 to 1.04) stratified, 0.87 (0.75 to 1.02) pooled. By the reading
++fixed in advance this counts as a sufficient explanation, since the interval now includes
++1 and the budget has the same sign. Stated plainly, the point estimate moved only from
++0.86 to 0.90; strokes that follow a coronary event account for roughly a third of the
++inverse association, measured selection for a tenth, and the remainder cannot be told
++from chance. In primary prevention censoring made no difference (1.14 and 1.15).
++
++**P4. Statin correction.** LDL-C per SD of score in cohort A: 0.135 mmol/L as measured,
++0.236 with divisor 0.7, 0.292 with 0.6, 0.371 with 0.5; among non-users, 0.297 in primary
++prevention and 0.238 in cohort A. Divisor 0.6 reproduces the untreated primary-prevention
++slope. Predicted trial hazard ratio (pooled model, full follow-up): 0.91 measured, 0.86
++with 0.7, 0.82 (0.67 to 0.90) with 0.6, 0.78 (0.61 to 0.88) with 0.5; against the trial,
++P 0.13, 0.04, 0.03 and 0.02 (stratified: 0.14, 0.07, 0.05, 0.04). The direction is the
++one stated in advance: a stronger correction widens the disagreement with the trial.
++
++**P5. Linearity.** (a) In the band predicted at 150 nmol/L or more (1,274 of cohort A,
++mean predicted 199 nmol/L, 419 four-point events) 80% have measured Lp(a) at or above
++150 nmol/L or above the assay range, so the band is what it claims to be. (b) Hazard
++ratios against the lowest band, cohort A: 1.11, 1.19, 1.24; primary prevention: 1.16,
++1.24, 1.47. (c) Spline with a knot at 150 nmol/L, log hazard ratio per 144 nmol/L higher:
++primary prevention 0.298 below and 0.319 above (P for change 0.81), linear throughout;
++cohort A 0.214 below and 0.013 above (SE 0.128; P for change 0.19). Per 144 nmol/L lower
++within the trial's range, cohort A: 0.99 (0.77 to 1.27), against the trial P 0.82; knot
++at 100 nmol/L 0.94 (0.79 to 1.12); three-point composite 1.02 (0.77 to 1.36). (d)
++Quadratic term in cohort A P 0.13. Stratified models agree. So inside the range the trial
++treated, the genetic estimate in established disease is compatible with no effect and
++equally with the overall estimate of 0.84: non-linearity is suggested by the point
++estimates and not established. Not declared in advance and so only noted: the trial moved
++participants from about 229 to 65 nmol/L, across the knot, so the slope above the knot
++alone is not the contrast the trial tested.
++
++**P6. Components beside the trial.** Per 144 nmol/L lower, cohort A against the trial:
++cardiovascular death 0.91 against 0.93 (P for difference 0.91); stroke 1.19 against 1.06
++(0.43); infarction 0.78 against 0.99 (0.02); revascularization 0.67 (any) against 1.04
++(urgent) (0.002); three-component 0.90 against 1.01 (0.16); four-component 0.84 against
++1.02 (0.006). The disagreement is in infarction and revascularization.
++
++**Reading.** Neither disease stage nor treatment duration, on its own, reconciles the
++genetic estimate with the trial. What remains open is whether the association in
++established disease weakens at the concentrations the trial treated; these data have 419
++events there and cannot settle it.
++
++Rounding corrected on 2026-11-20 in three places above (0.9146 is 0.91, not 0.92, for the
++measured-scale prediction and for cardiovascular death); no estimate changed.
++
++## Matched-endpoint analysis (2026-11-21, declared before any estimate below exists)
++
++Post hoc. It cannot change the verdict of record. Code: `lpa_horizon_posthoc3.R`, which
++sources `lpa_horizon.R` unchanged and takes the function definitions of the two post hoc
++scripts and of `lpa_forecast.R` without running them.
++
++**Why.** An outside review of the manuscript (21 November) asked for like-with-like
++endpoints: the trial counted urgent coronary revascularization leading to hospitalization,
++this study any coronary revascularization, which is where the genetic association is
++largest. Record-level hospital episodes with the method of admission are not held.
++
++**What had been seen when this was written.** Everything above. The forecast outputs,
++including the three-point composite at the trial's concentrations: 0.89 (0.82 to 0.97) with
++one slope and 0.94 (0.82 to 1.08) with two. A counts-only job (`urgent_feas_counts.R`, LS6
++job 3602802) that tabulated no outcome against Lp(a) or genotype: in cohort A, 1,962 first
++revascularizations, 786 participants with an acute-linked procedure and 1,180 with one that
++is not; composites of 3,997 (three-point), 4,790 (four-point with any revascularization)
++and 4,078 (four-point with acute-linked revascularization only). So the matched composite
++is the three-point composite plus 81 events, and its estimate is known in advance to be
++close to the three-point one. Hand arithmetic from printed numbers: the three-point
++prediction with one slope against the trial's primary result gives P about 0.07. Not seen:
++any estimate for acute-linked revascularization, for other revascularization, or for the
++matched composite.
++
++**Definitions.** Acute coronary codes: ICD-10 I20.0, I21, I22 and I24 in hospital data
++(first date of each distinct code). A revascularization (OPCS-4 K40 to K46, K49, K50, K75)
++is *acute-linked* if such a code was first recorded from 7 days before the procedure to one
++day after it; windows of 14 and 30 days are sensitivity analyses. It is *other* if no such
++code falls within 30 days. The *matched composite* is cardiovascular death, myocardial
++infarction, ischaemic stroke or acute-linked revascularization (7 days). Time zero,
++censoring, exposures, covariates and cohorts are those of the pre-registered analysis.
++
++**Analyses.**
++
++- M1, the main one. Matched composite in cohort A: hazard ratio per 144 nmol/L lower, and
++  the prediction for the trial at its post-baseline geometric means (229.4 and 65.2 nmol/L)
++  with one slope and with a second slope above 150 nmol/L, intervals from 20,000 draws
++  (seed 42), each compared with the trial's primary result (1.02, 0.90 to 1.15) by a
++  two-sided z test.
++- M2. Stage contrast for the matched composite, cohort A against cohort C standardized,
++  with the pre-registered decision rule applied to it.
++- M3. Acute-linked and other revascularization in cohort A: a hazard ratio for each, and
++  their difference from one stacked Cox model (a stratum per event type, every covariate
++  free to differ by type, variance clustered on participant). The prediction for
++  acute-linked revascularization at the trial's concentrations is set beside the trial's
++  urgent coronary revascularization (1.04, 0.80 to 1.36).
++- M4, sensitivity. Windows of 14 and 30 days; five-year horizon; cohort C standardized and
++  cohort D; cohort A stratified on qualifying condition; predictions rescaled to trial
++  duration through LDL-C.
++
++**Gates.** The thirteen gates of the pre-registered run. The first revascularization date
++rebuilt from the dated codes equals the endpoint of record for every participant of
++cohorts A, C and D. The event counts equal those of job 3602802 (A: 786 acute-linked, 1,180
++other, 4,078 matched composite). The Lp(a) coefficients of record are reproduced to 1e-9
++(four-point 0.174533790354549, three-point 0.101635091628793).
++
++**Reading fixed now.**
++
++- M1. If the one-slope prediction for the matched composite does not differ from the
++  trial's primary result at two-sided P below 0.05, the manuscript withdraws the statement
++  that one slope is contradicted by the trial: on a matched endpoint the comparison is
++  inconclusive, and the earlier conflict (P 0.003) is attributed to revascularizations the
++  trial did not count. If it does differ at P below 0.05, the conflict is robust to
++  matching the endpoint and the text says so. Either way the any-revascularization estimate
++  stays the result of record for the pre-registered composite.
++- M2. Reported with its verdict; the verdict of record does not change.
++- M3. If the two revascularization estimates differ at two-sided P below 0.05, report that
++  the association is stronger for the type with the larger estimate; otherwise report no
++  evidence of a difference. No claim about urgency itself: the proxy is proximity to a
++  newly recorded diagnosis, not an adjudicated admission.
++
++**Limits fixed now.** The proxy undercounts: 32% of cohort A already carry an acute
++coronary code before baseline, and a repeat event under an unchanged code is invisible, so
++some urgent procedures are classed as other. The truth lies between the matched composite
++and the any-revascularization composite, which are reported side by side. Diagnosis dates
++are episode dates. M1 is close to the three-point result by construction, which had been
++seen.
++
++**Expectation, written before the run.** Matched composite in cohort A 0.89 to 0.91 per
++144 nmol/L lower. Prediction with one slope 0.87 to 0.90, P against the trial between 0.05
++and 0.15; with two slopes 0.92 to 0.96, P above 0.3. Stage ratio for the matched composite
++near 0.4. Acute-linked revascularization 0.75 to 0.85, other revascularization 0.60 to
++0.70, and I think it more likely than not that they differ at P below 0.05.

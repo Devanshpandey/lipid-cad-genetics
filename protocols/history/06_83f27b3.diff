@@ -1,0 +1,82 @@
+commit 83f27b3848de3faafe702eea5b5fca37f18399b5
+author date 2026-11-20T20:53:35-06:00
+commit date 2026-11-20T20:53:35-06:00
+
+feat(lpa-horizon): log the pre-registered outcome and add two post hoc checks
+
+Records the outcome of the pre-registered run (LS6 job 3600628, verdict
+PARTIAL_PERSISTENCE) in the readout, then declares two analyses designed
+after that outcome was read, before either is run on real data:
+
+  P1  same Cox model stratified on the seven combinations of qualifying
+      condition (prior infarction, ischaemic stroke, peripheral disease),
+      with every endpoint within each condition
+  P2  LDL-C calibration: the Lp(a) estimate expressed as an equivalent
+      LDL-C difference (Fieller interval) and as the trial hazard ratio
+      it predicts under the CTT rate ratio of 0.78 per 1 mmol/L
+
+lpa_horizon_posthoc.R sources the pre-registered script unchanged (the
+SLURM wrapper refuses to run if its md5 differs) and carries its own
+synthetic self-test (LS6 job 3600659, 12 checks). Neither check can
+change the verdict of record.
+
+Co-Authored-By: Claude Fable 5.2 
+
+
+diff --git a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+index 761e188..62d157b 100644
+--- a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
++++ b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+@@ -160,3 +160,52 @@ Any change after this file is committed is listed here with its date, its reason
+ whether an estimate had been seen.
+ 
+ - None at the time of the first commit.
++
++## Outcome of the pre-registered run
++
++LS6 job 3600628 on 2026-11-20, code at commit 238b4c3 (script md5
++`6e1c268df17113e7959d4078ee830b64`). All 13 gates passed. Verdict of record:
++**PARTIAL_PERSISTENCE**. Lp(a) per 144 nmol/L higher: cohort A hazard ratio 1.19 (1.12 to
++1.27), cohort C standardized 1.35 (1.30 to 1.40), difference P 0.00094, ratio of log
++hazard ratios 0.58 (0.35 to 0.81). LDL-C control present in A (1.07, 1.04 to 1.10). Lp(a)
++not more attenuated than LDL-C (P 0.24). Bias flag not raised. The written prediction
++(attenuated to absent) was wrong. Outputs: `exports/agent1/lpa_horizon/emulation/`.
++
++## Post hoc analyses (2026-11-20, after the outcome above had been read)
++
++Nothing here changes the verdict of record. Both analyses are in
++`lpa_horizon_posthoc.R`, which sources the pre-registered script without editing it, and
++both were written after seeing the estimates, so they are exploratory.
++
++One piece of arithmetic was already done by hand after the run and is post hoc too: the
++three-point composite at five years (0.88 per 144 nmol/L lower, 0.78 to 1.00) is not
++significantly different from the trial's 1.02 (P about 0.10).
++
++**P1. Qualifying condition.** Seen in the results: cohort A pools prior infarction, prior
++ischaemic stroke and peripheral artery disease, the primary model does not adjust for
++which, and the Lp(a) association with later stroke ran the wrong way (1.19 per 144 nmol/L
++lower, 1.04 to 1.37). If high Lp(a) brings people into the cohort through infarction
++rather than stroke, a pooled model can show this without any real effect. Analysis: (a)
++mean predicted Lp(a) by qualifying condition (no outcome); (b) the primary model in A
++stratified on the seven combinations of the three conditions, every endpoint and both
++horizons, with the stage contrast recomputed; (c) every endpoint within prior infarction,
++prior stroke, peripheral disease, infarction without stroke and stroke without
++infarction.
++
++**P2. What trial effect does the genetic estimate predict?** Genotype differences are
++lifelong and a trial lasts about five years, so a genetic hazard ratio cannot be compared
++with a trial's directly. LDL-C supplies the conversion because both are known for it.
++Analysis: in each cohort, (a) the difference in measured LDL-C per SD of the LDL-C score,
++adjusted as in the outcome model; (b) the LDL-C difference with the same genetic effect
++on the four-point composite as 144 nmol/L of Lp(a), with a Fieller interval; (c) the
++predicted hazard ratio for a trial lowering Lp(a) by 144 nmol/L, as 0.78 raised to that
++equivalence. The constant 0.78 (0.76 to 0.80) per 1 mmol/L is the Cholesterol Treatment
++Trialists' rate ratio for major vascular events (coronary death, infarction, coronary
++revascularization, ischaemic stroke) over a median of about five years (Lancet 2010, doi
++10.1016/S0140-6736(10)61350-5); its uncertainty is ignored. Cohort C is run as a check on
++the method: it should give roughly the published equivalence of about 0.6 mmol/L per 144
++nmol/L (Burgess et al. 2018). Assumption: per unit of genetic effect, short-term benefit
++is the same fraction of lifelong benefit for Lp(a) as for LDL-C. Stated weakness: the
++LDL-C difference between genotypes is smaller on statins than it was before them, so
++measured LDL-C in cohort A understates the lifelong difference; the calibration is
++repeated with LDL-C divided by 0.7 in statin users to show the sensitivity.

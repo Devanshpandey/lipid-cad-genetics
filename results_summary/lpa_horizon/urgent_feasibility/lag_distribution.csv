@@ -1,0 +1,25 @@
+cohort,lag_from_nearest_acute_code,first_procedures,pct
+established disease at baseline (cohort A),1 same day or the day after,479,24.4138634046891
+established disease at baseline (cohort A),2 one or two days before,127,6.47298674821611
+established disease at baseline (cohort A),3 three to 7 days,128,6.52395514780836
+established disease at baseline (cohort A),4 eight to 14 days,72,3.6697247706422
+established disease at baseline (cohort A),5 fifteen to 30 days,47,2.39551478083588
+established disease at baseline (cohort A),6 thirty-one to 365 days,118,6.01427115188583
+established disease at baseline (cohort A),7 more than a year,515,26.2487257900102
+established disease at baseline (cohort A),8 no acute code on record before it,476,24.2609582059123
+before a first event (cohort C),1 same day or the day after,4258,40.6220186987216
+before a first event (cohort C),2 one or two days before,783,7.46994848311391
+before a first event (cohort C),3 three to 7 days,677,6.45869108948674
+before a first event (cohort C),4 eight to 14 days,332,3.16733447815302
+before a first event (cohort C),5 fifteen to 30 days,207,1.97481396680023
+before a first event (cohort C),6 thirty-one to 365 days,278,2.65216561724862
+before a first event (cohort C),7 more than a year,59,0.562869681358519
+before a first event (cohort C),8 no acute code on record before it,3888,37.0921579851174
+from 30 days after a first event in follow-up (cohort D),1 same day or the day after,260,26.1044176706827
+from 30 days after a first event in follow-up (cohort D),2 one or two days before,64,6.42570281124498
+from 30 days after a first event in follow-up (cohort D),3 three to 7 days,49,4.91967871485944
+from 30 days after a first event in follow-up (cohort D),4 eight to 14 days,27,2.71084337349398
+from 30 days after a first event in follow-up (cohort D),5 fifteen to 30 days,18,1.80722891566265
+from 30 days after a first event in follow-up (cohort D),6 thirty-one to 365 days,342,34.3373493975904
+from 30 days after a first event in follow-up (cohort D),7 more than a year,107,10.7429718875502
+from 30 days after a first event in follow-up (cohort D),8 no acute code on record before it,129,12.9518072289157

@@ -1,0 +1,37 @@
+ancestry,trait,method,n_snp,OR,CI_lo,CI_hi,P
+AFR,LDL,Inverse variance weighted,41,1.577,1.377,1.807,4.91e-11
+AFR,LDL,Weighted median,41,1.391,1.175,1.648,0.00013
+AFR,LDL,Weighted mode,41,1.363,0.633,2.931,0.433
+AFR,LDL,MR Egger,41,1.214,0.986,1.495,0.0749
+AFR,LDL,MR-PRESSO global,41,,,,0.026
+AFR,LDL,MR-PRESSO corrected (1 outliers),41,1.521,1.356,1.706,1.32e-08
+AFR,HDL,Inverse variance weighted,45,0.788,0.667,0.932,0.00535
+AFR,HDL,Weighted median,45,0.793,0.65,0.968,0.0226
+AFR,HDL,Weighted mode,45,0.544,0.23,1.288,0.173
+AFR,HDL,MR Egger,45,0.661,0.432,1.012,0.0634
+AFR,HDL,MR-PRESSO global,45,,,,
+AFR,HDL,MR-PRESSO corrected (1 outliers),45,0.879,0.744,1.039,0.139
+AFR,logTG,Inverse variance weighted,33,1.346,1.164,1.556,5.92e-05
+AFR,logTG,Weighted median,33,1.245,1.037,1.496,0.0189
+AFR,logTG,Weighted mode,33,1.042,0.448,2.423,0.925
+AFR,logTG,MR Egger,33,1.208,0.942,1.55,0.147
+AFR,logTG,MR-PRESSO global,33,,,,
+AFR,logTG,MR-PRESSO corrected (3 outliers),33,1.456,1.257,1.687,2.48e-05
+HIS,LDL,Inverse variance weighted,17,1.615,1.402,1.86,3.14e-11
+HIS,LDL,Weighted median,17,1.627,1.348,1.963,3.81e-07
+HIS,LDL,Weighted mode,17,2.093,1.196,3.66,0.0198
+HIS,LDL,MR Egger,17,1.405,1.117,1.768,0.011
+HIS,LDL,MR-PRESSO global,17,,,,0.0035
+HIS,LDL,MR-PRESSO corrected (2 outliers),17,1.663,1.44,1.919,6.87e-06
+HIS,HDL,Inverse variance weighted,17,0.946,0.799,1.12,0.519
+HIS,HDL,Weighted median,17,0.959,0.828,1.112,0.58
+HIS,HDL,Weighted mode,17,0.964,0.373,2.493,0.941
+HIS,HDL,MR Egger,17,0.913,0.659,1.265,0.591
+HIS,HDL,MR-PRESSO global,17,,,,
+HIS,HDL,MR-PRESSO corrected (1 outliers),17,0.897,0.773,1.041,0.173
+HIS,logTG,Inverse variance weighted,14,1.462,1.226,1.744,2.4e-05
+HIS,logTG,Weighted median,14,1.355,1.111,1.652,0.00268
+HIS,logTG,Weighted mode,14,1.351,0.842,2.165,0.234
+HIS,logTG,MR Egger,14,1.904,1.39,2.609,0.00174
+HIS,logTG,MR-PRESSO global,14,,,,0.034
+HIS,logTG,MR-PRESSO corrected (1 outliers),14,1.375,1.191,1.587,0.000951

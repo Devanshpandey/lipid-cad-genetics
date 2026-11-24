@@ -1,0 +1,184 @@
+commit 6a78ea03545b012055e93d822390d94b4cd97350
+author date 2026-11-24T17:11:47-06:00
+commit date 2026-11-24T17:12:05-06:00
+
+docs(protocols): record the outcome sections of the comparison, forecasts and amplification test
+
+The outcome sections were written on 20 and 21 November 2026, after each analysis
+ran, together with a dated note of 21 November saying that the "matched" endpoint
+is a trial-proxy endpoint and withdrawing a sentence that read two composites as
+bounds. The text is added only; nothing earlier is changed. It was kept
+uncommitted until now; this commit dates it before the public release of the code
+deposit (v2.0.0).
+
+Co-Authored-By: Claude Opus 5.5 
+
+
+diff --git a/scripts/agent1_genetics/lpa_horizon/FORECAST_PREREGISTRATION.md b/scripts/agent1_genetics/lpa_horizon/FORECAST_PREREGISTRATION.md
+index a7bfa60..d430935 100644
+--- a/scripts/agent1_genetics/lpa_horizon/FORECAST_PREREGISTRATION.md
++++ b/scripts/agent1_genetics/lpa_horizon/FORECAST_PREREGISTRATION.md
+@@ -148,3 +148,52 @@ the observed result.
+ ## Deviations
+ 
+ None at the time of writing. Any change after this file is committed is listed here.
++
++## Outcome
++
++Run 2026-11-20 at commit `c2f7eca` (LS6 job 3600935; self-test job 3600930, 14 checks;
++the thirteen emulation gates and the six forecast gates passed). Tables in
++`exports/agent1/lpa_horizon/forecast/`. Hazard ratios are for each trial's lowering at
++its central scenario, lifelong scale, with 95% intervals.
++
++**Check, Lp(a)HORIZON (229.4 to 65.2 nmol/L).** Four-point composite: one slope 0.82
++(0.76 to 0.88), against the observed 1.02 P 0.003; two slopes 0.88 (0.77 to 0.99), P
++0.09. Scaled to trial duration: 0.80 (P 0.02) and 0.86 (P 0.13). Three-point: 0.89 and
++0.94, neither contradicted (P 0.13 and 0.47). The one-slope model fails where the answer
++is known; the two-slope model is not rejected.
++
++**Primary forecast, ACCLAIM-Lp(a) stage contrast.** R = 0.69 (0.40 to 1.16) with the
++primary at-risk definition (20,065 participants, 3,261 events); probability that the
++at-risk stratum benefits more, 92%. The interval includes 1: the forecast gives a
++direction, not a clear separation. Broader at-risk definitions: 0.59 (0.38 to 0.82) for
++all aged 55 or more without vascular disease, 0.57 (0.37 to 0.79) for all primary
++prevention, 0.67 (0.41 to 1.02) adding recorded vascular disease without an event.
++Three-point composite 0.44 (0.14 to 0.95).
++
++**Absolute forecasts.** ACCLAIM-Lp(a) at risk: 0.68 (0.59 to 0.78) one slope, 0.67 (0.53
++to 0.86) two slopes. ACCLAIM-Lp(a) established: 0.77 (0.70 to 0.84) and 0.84 (0.74 to
++0.97). OCEAN(a)-Outcomes coronary composite: 0.71 (0.62 to 0.80) and 0.81 (0.65 to 1.02);
++coronary death or infarction 0.75 (0.65 to 0.87) and 0.88 (0.67 to 1.15); three-point
++0.86 (0.75 to 0.98) and 1.06 (0.83 to 1.36).
++
++**Slopes above 150 nmol/L in the wider cohorts** (not a declared test; printed with the
++models): change of slope -0.24 (SE 0.13, P 0.07) in the ACCLAIM established cohort and
++-0.28 (SE 0.17, P 0.10) for the coronary composite in the OCEAN(a)-like cohort; none in
++any at-risk cohort (P 0.4 to 0.99). These cohorts contain the emulation's
++established-disease cohort and are not independent of it.
++
++**Against the written expectation.** R 0.69, inside 0.5 to 0.7. OCEAN(a)-Outcomes 0.71
++with one slope, at the edge of the expected 0.6 to 0.7, and 0.81 with two, just above the
++expected 0.75 to 0.8. The Lp(a)HORIZON check under two slopes 0.88 and not significantly
++different, as expected.
++
++**What a null result would now mean.** Stated while scoping, and wrong: that a null
++OCEAN(a)-Outcomes would contradict both models. The two-slope interval reaches 1.02 for
++its coronary composite and 1.15 without revascularization, so a null result there would
++contradict only the one-slope model, which Lp(a)HORIZON has already contradicted. The
++forecast that a null result would clearly contradict is the at-risk stratum of
++ACCLAIM-Lp(a): 0.67 to 0.68, upper limit 0.86 under either model.
++
++**Reliability of the scaled forecasts.** Where the LDL-C score's association with the
++end point is weak (three-point composites in established disease) the scaled intervals
++are very wide and should not be used.
+diff --git a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+index 9efaa21..9f0002d 100644
+--- a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
++++ b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+@@ -457,3 +457,63 @@ seen.
+ and 0.15; with two slopes 0.92 to 0.96, P above 0.3. Stage ratio for the matched composite
+ near 0.4. Acute-linked revascularization 0.75 to 0.85, other revascularization 0.60 to
+ 0.70, and I think it more likely than not that they differ at P below 0.05.
++
++## Outcome of the matched-endpoint analysis
++
++Run 2026-11-21 at commit `08b8a16` (LS6 job 3602926; self-test job 3602910, 21 checks).
++The thirteen gates and the five gates of this analysis passed: counts equal to job 3602802,
++the four-point coefficient reproduced exactly and the three-point one to 1e-15. Tables in
++`exports/agent1/lpa_horizon/matched_endpoint/`. Hazard ratios are per 144 nmol/L lower
++predicted Lp(a), full follow-up, cohort A pooled unless stated.
++
++**M1.** Matched composite (4,078 events): 0.88 (0.82 to 0.95); stratified on qualifying
++condition 0.89 (0.83 to 0.96); five-year horizon 0.84 (0.75 to 0.95). Prediction for the
++trial with one slope 0.87 (0.80 to 0.94), against its primary result P 0.031; with two
++slopes 0.92 (0.80 to 1.05), P 0.27. Windows of 14 and 30 days give the same numbers (P
++0.031 and 0.032). Rescaled to trial duration the intervals are too wide to read (0.79,
++0.40 to 0.93). For reference, the pre-registered composite gives 0.82 (P 0.003) and 0.88
++(P 0.09), and the three-point composite against the trial's primary result 0.89 (P 0.07)
++and 0.94 (P 0.38).
++
++**Reading, by the rule fixed in advance.** The one-slope prediction differs from the trial
++at P below 0.05, so the conflict is robust to matching the endpoint, and the manuscript
++keeps it. It is weaker than on the pre-registered composite (P 0.03 against 0.003), and
++with two slopes the comparison stays inconclusive.
++
++**M2.** Stage contrast for the matched composite: cohort C standardized 0.78 (0.75 to
++0.81), ratio of log hazard ratios 0.49 (0.20 to 0.79), P for difference 0.002; the rule
++returns PARTIAL_PERSISTENCE, as for the composite of record.
++
++**M3.** Acute-linked revascularization (786 events) 0.65 (0.56 to 0.76); other
++revascularization (1,180 events) 0.65 (0.58 to 0.74); difference of log hazard ratios
++0.001 (SE 0.095), P 0.99. No evidence of a difference. Prediction for acute-linked
++revascularization at the trial's concentrations: 0.61 (0.52 to 0.73) with one slope and
++0.65 (0.50 to 0.84) with two, against the trial's urgent coronary revascularization 1.04
++(0.80 to 1.36), P 0.001 and 0.012. In cohort C the association is somewhat weaker for
++acute-linked procedures (0.69 against 0.59, P 0.03); in cohort D 0.80 (0.63 to 1.01)
++against 0.75 (0.63 to 0.91), P 0.70. Not declared and only noted: for the LDL-C score in
++cohort A the two do differ (0.96 per SD lower for acute-linked, 0.88 for other, P 0.04).
++
++**Cohort D.** Matched composite 0.96 (0.87 to 1.07), the same as its three-point
++composite. The association of 0.88 (0.80 to 0.96) reported for cohort D on the
++pre-registered composite is therefore carried by revascularization; on the matched
++composite cohort D does not show one. Its interval includes the cohort A estimate.
++
++**Against the written expectation.** Wrong on the two points that mattered. I expected the
++one-slope prediction to lose significance on the matched composite (P 0.05 to 0.15); it is
++0.03. I expected the association to be weaker for acute-linked than for other
++revascularization (0.75 to 0.85 against 0.60 to 0.70); they are the same, 0.65. Right on
++the rest: the matched composite itself (0.88 against an expected 0.89 to 0.91, just
++outside), the two-slope prediction (0.92, P 0.27) and the stage ratio (0.49).
++
++**What it means.** Counting any revascularization, where the trial counted urgent ones,
++explains part of the disagreement and not all of it. The stand-in undercounts urgent
++procedures and is not adjudicated, so this is a bound, not a like-for-like comparison:
++the truth lies between the two composites, and on both the one-slope prediction is below
++what the trial observed.
++
++**Wording corrected after a second outside review (2026-11-21).** The stand-in is a proxy
++for the trial's endpoint, not a match, and the manuscript calls it the trial-proxy
++endpoint. The statements above, and in the limits fixed before the run, that the truth
++lies between the two composites are withdrawn: the two estimates show how sensitive the
++comparison is to the endpoint definition and do not establish bounds. No estimate changed.
+diff --git a/scripts/agent1_genetics/lpa_susceptibility/PREREGISTRATION.md b/scripts/agent1_genetics/lpa_susceptibility/PREREGISTRATION.md
+index a3b3b3b..221a4f2 100644
+--- a/scripts/agent1_genetics/lpa_susceptibility/PREREGISTRATION.md
++++ b/scripts/agent1_genetics/lpa_susceptibility/PREREGISTRATION.md
+@@ -191,3 +191,38 @@ before it is believed.
+ to 1e-6; the *LPA*-region score present for at least 99.9% of the cohort; the two parts
+ sum to the original lipid-region score for every participant; exactly one lipid region
+ overlaps the *LPA* gene and it contains rs10455872.
++
++## Outcome of the post hoc analysis
++
++Run 2026-11-21 at commit `8cc1ada` (LS6 job 3602413; self-test job 3602296, 8 checks).
++Gates passed: cohort and events as before, both pre-registered products reproduced to
++ten decimal places, the two parts summing to the original score to 5e-16. The *LPA*
++region held 1,066 score variants. Tables in
++`exports/agent1/lpa_susceptibility/posthoc_lpa_removed/`.
++
++**Components, no outcome.** The *LPA* region carries 20% of the variance of the
++lipid-region score. Predicted Lp(a) correlates 0.30 with the original lipid-region score,
++0.67 with its *LPA*-region part and -0.003 with the remainder.
++
++**Products with the lipid-region score** (per SD of Lp(a) by unit of score):
++
++| Analysis | Original | *LPA* region removed | *LPA* region as its own term |
++|---|---|---|---|
++| Predicted Lp(a), all eligible | -0.046 (SE 0.016), P 0.004 | -0.015 (0.017), P 0.38 | -0.119 (0.043), P 0.005 |
++| Predicted Lp(a), statin-free | -0.055 (0.019), P 0.004 | -0.020 (0.020), P 0.29 | -0.110 (0.052), P 0.035 |
++| Measured Lp(a) | -0.036 (0.016), P 0.030 | -0.016 (0.018), P 0.36 | 0.064 (0.044), P 0.14 |
++
++The corrected contrast D is 0.041 (SE 0.032), against 0.099 (0.034) before. The product
++with the non-lipid score is unchanged (0.0085, SE 0.0082), so the verdict stands.
++
++**Reading, by the rule fixed in advance.** For predicted Lp(a), the analysis that was
++pre-registered, the corrected product includes zero and the product with the
++*LPA*-region component is negative: the original result was the same locus on both sides
++of the product. There is no evidence that Lp(a) combines other than multiplicatively
++with polygenic risk at the other lipid loci. One wrinkle: with measured Lp(a) the
++corrected product is equally null, but the same-locus term is not negative, so the
++"same locus" account is supported for predicted Lp(a) and not shown for measured.
++
++**Note for the earlier work.** One fifth of the variance of its lipid-region score is
++the *LPA* locus. Its ApoB analyses are not invalidated by this, since *LPA* is an ApoB
++locus, but "lipid-region" there means LDL-pathway loci plus Lp(a).

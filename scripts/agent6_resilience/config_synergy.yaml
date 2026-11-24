@@ -1,0 +1,47 @@
+# ============================================================================
+# Synergy follow-up (S1-S3), frozen 2026-09-29 before any of these analyses
+# touched outcomes. Separate from config.yaml so the md5 of the preregistered
+# config, recorded by every stage 00-07 manifest, is unchanged.
+# ============================================================================
+seed: 42
+primary_field: 23439                     # ApoB (Nightingale NMR)
+covariates: ["age", "sex", "PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10"]
+spline_df: 4
+alpha: 0.05
+
+s1:                                      # robustness of the 40 H3a interactions
+  expected_n_sig: 40                     # metabolites passing Meff-Bonferroni in run v2 stage 05
+  min_frac_same_sign_p05: 0.75           # S1a and S1b rule
+  phase_date_field: 23658                # Sample Measured Date and Time, instance 0
+  phase_cut_date: "2021-01-01"           # release phase 1 measured 2019-2020, phase 2 2021-2022
+  phase_min_frac_same_sign: 0.80         # S1c rule
+  phase_min_z_corr: 0.50                 # S1c rule, across all 164 metabolites
+  consistency_tol: 1.0e-8                # replication code must reproduce the stage-05 ApoB estimate
+
+s2:                                      # lipid versus non-lipid PRS
+  apob_gwas: "results/agent1_genetics/gwas_summary_stats/merged/lipids_APOB.txt.gz"
+  gwas_min_call_rate: 0.95
+  gwas_min_maf: 0.01
+  gw_log10p: 7.30103
+  locus_merge_kb: 500
+  windows_kb: [250, 500, 1000]
+  primary_window_kb: 500
+  positive_controls:                     # GRCh37; must lie inside lipid regions (every window)
+    LDLR: [19, 11210000]
+    PCSK9: [1, 55510000]
+    APOB: [2, 21245000]
+    APOE: [19, 45411000]
+  negative_controls:                     # GRCh37; must lie outside lipid regions (primary window)
+    9p21_rs4977574: [9, 22098574]
+    PHACTR1_rs9349379: [6, 12903957]
+  sum_check: "6-significant-digit rounding bound per person"   # DEVIATION 2026-09-29: replaced sum_tolerance_sd 1e-6
+                                                                 # (PLINK2 prints scores to 6 significant digits)
+  retest:                                # DEVIATION 2026-09-29 (see PREREGISTRATION): statin-free replication of each lead
+    apob_field: 30640
+    p_max: 1.0e-5
+    require_same_sign: true
+    min_frac_same_sign: 0.90             # sanity: most ApoB leads must replicate in sign
+
+s3:                                      # genetic synergy, full cohort
+  batch_as_factor: true
+  min_prs_coverage: 0.99

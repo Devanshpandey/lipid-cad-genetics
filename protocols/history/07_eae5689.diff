@@ -1,0 +1,143 @@
+commit eae5689f51eab3bf37f28b779800e919dedfeb26
+author date 2026-11-20T21:48:31-06:00
+commit date 2026-11-20T21:48:31-06:00
+
+feat(lpa-horizon): record the first post hoc outcome and declare checks P3-P6
+
+Adds to the readout the outcome of the first post hoc round (LS6 job
+3600785) and, before any of them is run, four further analyses:
+
+  P3  inverse stroke association: selection budget per endpoint with
+      atrial fibrillation and systolic pressure added, adjusted models,
+      and stroke as a first event (censored at infarction or
+      revascularization)
+  P4  LDL-C calibration with statin divisors 0.6 and 0.5 and with the
+      slope among participants not taking a statin
+  P5  linearity into the trial's range: bands of predicted Lp(a), a
+      spline with a knot at 150 nmol/L, a quadratic term
+  P6  descriptive comparison with the trial's published components
+
+lpa_horizon_posthoc2.R sources the pre-registered script unchanged and
+takes the first post hoc script's function definitions without running
+it; the SLURM wrapper checks both md5s. Synthetic self-test: LS6 job
+3600851, 20 checks. The verdict of record cannot change.
+
+Co-Authored-By: Claude Fable 5.2 
+
+
+diff --git a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+index 62d157b..8bef974 100644
+--- a/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
++++ b/scripts/agent1_genetics/lpa_horizon/PREREGISTERED_READOUT.md
+@@ -209,3 +209,111 @@ is the same fraction of lifelong benefit for Lp(a) as for LDL-C. Stated weakness
+ LDL-C difference between genotypes is smaller on statins than it was before them, so
+ measured LDL-C in cohort A understates the lifelong difference; the calibration is
+ repeated with LDL-C divided by 0.7 in statin users to show the sensitivity.
++
++## Outcome of the post hoc analyses
++
++Run 2026-11-20 at commit `83f27b3` (LS6 job 3600785; self-test job 3600659, 12 checks;
++all 13 gates re-checked and passed). Tables in `exports/agent1/lpa_horizon/posthoc/`.
++The verdict of record is unchanged and could not have been changed by these analyses.
++Hazard ratios are per 144 nmol/L higher predicted Lp(a), full follow-up, unless stated.
++
++**P1. Qualifying condition.** Mean predicted Lp(a) is 58.6 nmol/L in prior infarction,
++56.8 in peripheral disease, 50.9 in prior ischaemic stroke and 48.8 in primary
++prevention, so composition does differ as suspected. Adjusting for it changes little.
++Four-point composite: pooled 1.19 (1.11 to 1.27), stratified 1.17 (1.09 to 1.25); stage
++ratio 0.58 pooled, 0.52 (0.29 to 0.74) stratified; the verdict rule applied to the
++stratified model still returns PARTIAL_PERSISTENCE. Three-point composite: 1.11 pooled,
++1.10 (1.02 to 1.18) stratified, stage ratio 0.36 (0.06 to 0.66). Components, stratified:
++revascularization 1.44 (1.31 to 1.58), infarction 1.26 (1.14 to 1.40), cardiovascular
++death 1.07 (0.95 to 1.20), ischaemic stroke 0.86 (0.75 to 0.99). The inverse stroke
++association is therefore NOT a composition artefact: pooled 0.84, stratified 0.86, and
++it is seen within prior infarction (0.85, 0.70 to 1.02), prior stroke (0.93, 0.75 to
++1.16) and peripheral disease (0.74, 0.49 to 1.12). It is absent at five years (0.97,
++0.76 to 1.23) and opposite to primary prevention (1.14, 1.06 to 1.23). It is unexplained;
++candidates are index-event selection on stroke-specific risk factors, displacement by
++earlier coronary events and treatment, and chance (one of six components, nominal P about
++0.03). Revascularization is raised within every condition (1.36 to 1.70). Cardiovascular
++death is flat within prior infarction (1.02, 0.89 to 1.17) and raised within prior stroke
++(1.30, 1.05 to 1.61).
++
++**P2. Calibration against LDL-C.** One SD of the LDL-C score corresponds to 0.135 mmol/L
++of measured LDL-C in cohort A (77% on statins) and 0.229 in cohort C; with LDL-C divided
++by 0.7 in statin users, 0.236 and 0.305. Method check in cohort C: 144 nmol/L of Lp(a)
++has the same association with the four-point composite as 0.78 mmol/L of LDL-C (0.63 to
++0.98; 1.04 on the statin-corrected scale). The published equivalences are 101.5 mg/dL
++(Burgess 2018, doi 10.1001/jamacardio.2018.1470) and 65.7 mg/dL (Lamina and Kronenberg
++2019, doi 10.1001/jamacardio.2019.1041) of Lp(a) per 1 mmol/L, which for 144 nmol/L is
++roughly 0.6 to 1.1 mmol/L depending on the paper and the mass-to-molar conversion: the
++check passes. In cohort A the equivalence is 0.36 mmol/L (0.19 to 0.73) on measured
++LDL-C and 0.63 (0.33 to 1.28) statin-corrected. Predicted hazard ratio for a trial
++lowering Lp(a) by 144 nmol/L, four-point composite with any revascularization: 0.92
++(0.83 to 0.95) on measured LDL-C and 0.86 (0.73 to 0.92) statin-corrected; stratified
++0.91 and 0.85. Against the trial's 1.02 (0.90 to 1.15): P 0.13 and 0.04 pooled, 0.14 and
++0.07 stratified. The uncalibrated lifelong estimate was 0.84 (P 0.006 against the trial).
++Five-year calibrations are uninformative (the LDL-C score's five-year effect in A is too
++imprecise; Fieller intervals very wide or unbounded).
++
++**Reading.** Adjusting for the qualifying condition does not change the result. Allowing
++for treatment duration moves the genetic prediction from 0.84 to roughly 0.85 to 0.92,
++which the trial's interval partly covers; the trial's endpoint also excluded elective
++revascularization, where the genetic effect is largest. The remaining disagreement with
++the trial is borderline and depends on how statin-treated LDL-C is scaled.
++
++## Further post hoc analyses (2026-11-20, after P1 and P2 had been read)
++
++Declared before any of them is run. Everything above had been seen, including the
++unexplained inverse stroke association and the dependence of the calibration on how
++statin-treated LDL-C is scaled. None of these can change the verdict of record. Code:
++`lpa_horizon_posthoc2.R`, which sources `lpa_horizon.R` unchanged and takes the function
++definitions of `lpa_horizon_posthoc.R` without running it.
++
++**P3. Is the inverse stroke association selection or displacement?** In cohort A, on
++later ischaemic stroke. (a) The selection-bias budget of the pre-registered run, repeated
++for each endpoint with the factor effects estimated on that endpoint and with two factors
++added that the budget lacked: atrial fibrillation before baseline (first-occurrence field
++131350) and baseline systolic pressure (field 4080, mean of the automated readings).
++(b) The stroke model adjusted for those factors, pooled and stratified, compared with the
++unadjusted model in the same participants. (c) Stroke as a first event: follow-up
++censored at the first later infarction or revascularization, after which treatment
++changes. Reading fixed now: if (b) or (c) moves the hazard ratio (0.86 stratified) to
++within its own interval of 1 and the budget in (a) has the same sign, that mechanism is a
++sufficient explanation; if neither moves it, the association stays unexplained. Limit:
++the budget covers measured factors only.
++
++**P4. Stronger statin correction.** P2 divided LDL-C by 0.7 in statin users. Repeat the
++calibration with 0.6 (the 40% relative effect estimated by Chong et al. 2026, doi
++10.1371/journal.pgen.1012366) and 0.5 (high-intensity treatment), and with a scale that
++needs no divisor: the LDL-C difference per SD of score among participants not taking a
++statin, in the primary-prevention cohort and in cohort A. Expected direction, stated
++now: a stronger correction raises the LDL-C equivalence of 144 nmol/L of Lp(a), lowers
++the predicted trial hazard ratio and so widens the disagreement with the trial. The
++non-user scale is biased the other way, because not being treated selects for lower
++LDL-C.
++
++**P5. Is the association linear into the trial's range?** The trial enrolled at 70 mg/dL
++or more (about 149 nmol/L); 7.5% of cohort A is predicted to be at or above 150 nmol/L.
++(a) No outcome: by band of predicted Lp(a) (below 50, 50 to 99, 100 to 149, 150 or more
++nmol/L), the share whose measured Lp(a) is at or above 150 nmol/L or above the assay's
++range. (b) Hazard ratio of each band against the lowest, and the slope implied by the top
++band (its log hazard ratio scaled to 144 nmol/L by the difference in mean predicted
++Lp(a)). (c) A linear spline with one knot at 150 nmol/L: slope below, slope above, and
++the test of their difference; knot at 100 nmol/L as a sensitivity analysis. (d) A
++quadratic term. Cohorts: A pooled, A stratified and primary prevention standardized;
++four-point and three-point composites; full follow-up. The slope above the knot is the
++uncalibrated genetic estimate inside the trial's range and is compared with the trial as
++before. Limit: about 1,300 participants of cohort A are above the knot, so that slope
++will be imprecise.
++
++**P6. Component-by-component comparison with the trial (descriptive).** Added after the
++trial's Table 2 was re-read beside results already in hand, which showed the disagreement
++concentrated in infarction and revascularization, so this is a description of something
++already seen and not a test. For each end point the trial reports (four-component and
++three-component composites, cardiovascular death, infarction, stroke, urgent coronary
++revascularization) the pre-registered lifelong estimate in cohort A, per 144 nmol/L
++lower, is set beside the trial's hazard ratio, with a z statistic for the difference. No
++model is fitted. Limits: lifelong against 4.7 years; the trial counts any non-fatal
++stroke and urgent revascularization only, this study ischaemic stroke and any
++revascularization.
++
++**External replication** is not attempted: it needs individual-level genotypes and
++follow-up after disease onset in a second cohort, which is not held on LS6.

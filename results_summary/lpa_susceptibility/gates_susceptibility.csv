@@ -1,0 +1,12 @@
+gate,value,target,rule,pass
+eligible cohort,379654,379654,equal,TRUE
+its events,15978,15978,equal,TRUE
+statin-free part,324626,324626,equal,TRUE
+its events,11740,11740,equal,TRUE
+earlier lipid-region by non-lipid product reproduced,0.0124399151356168,0.0124399151356168,within 1e-6,TRUE
+discovery sample,181162,181162,equal,TRUE
+its events,6540,6540,equal,TRUE
+earlier ApoB product reproduced,0.0576577396138093,0.0576577396138093,within 1e-6,TRUE
+this script's model equals the earlier function,0,0,below 1e-9,TRUE
+"eligible cohort with predicted Lp(a), %",100,99.9,at least,TRUE
+|correlation| of predicted Lp(a) with N,0.00283679644318555,0.02,below,TRUE

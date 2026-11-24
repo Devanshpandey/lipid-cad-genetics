@@ -1,0 +1,34 @@
+commit 967614cc8319e595e8b591b3d51d183ea8c6563d
+author date 2026-11-07T19:11:28-06:00
+commit date 2026-11-07T19:11:28-06:00
+
+docs(nature-round): correct the B cohort-flow amendment
+
+The 4 November amendment said the manuscript states no cohort flow. It does:
+a search for "379,896" missed the LaTeX form 379{,}896. The published flow
+(402,119 -> 21,847 prevalent -> 376 "without follow-up" -> 379,896) does not
+reproduce; the rerun starts at 401,743 and drops nobody for follow-up. The 376
+are most likely participants without a medication report (unverified). No
+verdict changes; the manuscript flow is corrected in revision r1.
+
+Co-Authored-By: Claude Opus 5.5 
+
+
+diff --git a/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md b/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
+index 3b946ac..0948dae 100644
+--- a/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
++++ b/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
+@@ -95,3 +95,13 @@ Written before the rerun: on the published estimates the NMR contrast LDL-C(NMR)
+ secondary arm whose qhet point estimate has the opposite sign as disagreement, so this change is expected
+ to leave the label at UNRESOLVED, now for disagreement across arms rather than for a missing arm, and
+ not to produce CONTRADICTS.
++
++**Correction to the B cohort-flow amendment of 2026-11-04.** Recorded 2026-11-07, after B's real result had been read; it changes
++no verdict. That amendment said the manuscript states no cohort flow. That was wrong: a text search for "379,896" missed the LaTeX
++form 379{,}896. The previous main text printed "Excluding 21,847 participants with coronary disease on or before baseline and 376
++without follow-up left 379,896", and the Supplementary Table caption (oS34) printed "from 402,119 with a baseline date, a medication
++report and score data". So the two rows were published values, and they do not reproduce. The rerun reaches the same 379,896
++participants, 32,053 events and estimates, but starts from 401,743 with a baseline date, a medication report and score data and
++drops nobody for lack of follow-up or covariates. The 376 are most likely participants without a medication report
++(402,119 - 401,743), counted under the wrong label. This is not verified here. The rows stay reported without a target, and the
++manuscript flow is corrected in revision r1 instead of being treated as absent.

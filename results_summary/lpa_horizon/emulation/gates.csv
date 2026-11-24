@@ -1,0 +1,14 @@
+gate,value,target,pass
+cohort with a baseline date,402119,"395,000-402,200",TRUE
+established-disease cohort size equals the feasibility count,16955,16955,TRUE
+its 4-point events equal the feasibility count,4790,4790,TRUE
+primary-prevention cohort size equals the feasibility count,371735,371735,TRUE
+exposure model: variants dropped as collinear,0,0,TRUE
+exposure model: |rs10455872| nmol/L per allele,110.2,100-120,TRUE
+exposure model: r2 with in-range measurements,0.524,> 0.45,TRUE
+share with all three exposures,1,> 0.99,TRUE
+published model: participants,379896,379896,TRUE
+published model: events,32053,32053,TRUE
+published model: Lp(a) score HR,1.096,1.096,TRUE
+published model: lower limit,1.083,1.083,TRUE
+published model: upper limit,1.11,1.11,TRUE

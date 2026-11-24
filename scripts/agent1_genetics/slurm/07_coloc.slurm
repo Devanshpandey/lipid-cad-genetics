@@ -39,15 +39,18 @@ outcome_idx=$(( IDX % N_OUTCOMES ))
 LIPID="${LIPID_TRAITS[$lipid_idx]}"
 OUTCOME="${OUTCOME_TRAITS[$outcome_idx]}"
 
-OUT_DIR="${AGENT1_OUT}/coloc"
+OUT_DIR="${AGENT1_OUT}/coloc_v2"
 mkdir -p "${OUT_DIR}"
 
 echo "[$(date '+%H:%M:%S')] [${SLURM_JOB_NAME:-shell}/${SLURM_ARRAY_JOB_ID:-0}_${IDX}] Coloc: ${LIPID} vs ${OUTCOME}"
+
+SENTINELS="${SCRATCH}/coloc_rerun/sentinels/sentinels_${LIPID}.tsv"
 
 Rscript "${SCRIPTS_DIR}/agent1_genetics/R/run_coloc.R" \
   --lipid_trait  "${LIPID}" \
   --outcome      "${OUTCOME}" \
   --sumstat_dir  "${AGENT1_OUT}/gwas_summary_stats/merged" \
+  --sentinels    "${SENTINELS}" \
   --out          "${OUT_DIR}/${LIPID}_vs_${OUTCOME}_coloc.csv"
 
 echo "[$(date)] Done: ${LIPID} vs ${OUTCOME}"

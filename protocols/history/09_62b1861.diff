@@ -1,0 +1,148 @@
+commit 62b18613ab3b48469e0624933b179be7f7541e88
+author date 2026-11-21T11:04:29-06:00
+commit date 2026-11-21T11:04:29-06:00
+
+feat(lpa-susceptibility): pre-register the Lp(a) by arterial-susceptibility test
+
+Asks whether a non-lipid coronary polygenic score amplifies the effect of
+Lp(a) as it does that of measured ApoB in the metabolome-resilience work.
+PREREGISTRATION.md fixes, before any estimate is computed:
+
+  primary    product of genetically predicted Lp(a) with the non-lipid
+             score, in the cohort, outcome and full-quadratic model of
+             that work's stage 11 (379,654 participants, 15,978 events)
+  rule       five verdicts on the product and on r = b(M:N) / b(M) relative
+             to the ApoB reference; three count as lead-grade
+  secondary  lipid-region product, spline, statin-free, sexes, windows,
+             measured Lp(a), the 167-variant LDL-C score, the additive
+             scale, and one model holding ApoB and Lp(a) together
+  gates      the thirteen emulation gates, recorded cohort and event
+             counts, and reproduction of two earlier estimates to 1e-6
+
+lpa_susceptibility.R reuses the agent6 libraries and lpa_horizon.R
+unchanged (the SLURM wrapper checks their md5s) and loads the latter into
+its own environment. Synthetic self-test: LS6 job 3602197, 16 checks.
+
+Co-Authored-By: Claude Fable 5.2 
+
+
+diff --git a/scripts/agent1_genetics/lpa_susceptibility/PREREGISTRATION.md b/scripts/agent1_genetics/lpa_susceptibility/PREREGISTRATION.md
+new file mode 100644
+index 0000000..75a943f
+--- /dev/null
++++ b/scripts/agent1_genetics/lpa_susceptibility/PREREGISTRATION.md
+@@ -0,0 +1,114 @@
++# Does arterial susceptibility amplify the Lp(a) axis as it does the ApoB axis?
++
++Written 2026-11-21, before any estimate below is computed. Code:
++`lpa_susceptibility.R`, which uses the metabolome-resilience libraries
++(`scripts/agent6_resilience/R/lib_*.R`) and the Lp(a) exposure model of
++`scripts/agent1_genetics/lpa_horizon/lpa_horizon.R`, all unchanged.
++
++## Question
++
++The metabolome-resilience work found that measured ApoB and a non-lipid coronary
++polygenic score more than multiply each other's hazard (product term 0.058, SE 0.015, in
++181,162 statin-free participants; 0.039, P 0.011, replicated with clinical ApoB), and
++randomized trials show larger relative benefit of LDL lowering at higher genetic risk
++(Mega et al. 2015, doi 10.1016/S0140-6736(14)61730-X; Natarajan et al. 2017, doi
++10.1161/CIRCULATIONAHA.116.024436). Is the effect of Lp(a), the second lipid axis,
++amplified in the same way?
++
++## What had been seen when this was written
++
++All results of the metabolome-resilience pipeline (S1 to S3 and the clinical
++replication), including that the genetic version of the ApoB test, lipid-region score by
++non-lipid score, was null at the primary window (0.012, SE 0.019). All results of the
++Lp(a)HORIZON emulation and forecasts, in which genetically predicted Lp(a) and the
++non-lipid score entered the same models as main effects only. Not seen: any product of
++Lp(a), measured or predicted, with any polygenic score; any product of the 167-variant
++LDL-C score with the non-lipid score.
++
++## Data and model, taken unchanged from the earlier analysis
++
++- Cohort: all eligible participants of its stage 11 (European ancestry, genetic quality
++  control, no prevalent coronary disease, follow-up beyond a two-year landmark):
++  379,654 with 15,978 incident events. Outcome: myocardial infarction or its
++  complications (I21 to I23, I24.1, I25.2), coronary revascularization (OPCS-4 K40 to
++  K46, K49, K50, K75) or coronary death, to 31 October 2022, clock restarted at the
++  landmark.
++- Scores: the lipid-region (L) and non-lipid (N) parts of the UK Biobank-free coronary
++  polygenic score, regions within 500 kb of ApoB lead variants, each centred and divided
++  by the SD of the total score.
++- Model: Cox regression with M, L, N, their squares and the products M:L, M:N and L:N,
++  adjusted for age, sex, ten principal components and genotyping batch (the "full
++  quadratic" of `quad_amplification`).
++
++## Exposure
++
++M is genotype-predicted Lp(a) from the censored-normal model on 45 *LPA* variants
++(the emulation's exposure), standardized in the eligible cohort. It is uncorrelated with
++the non-lipid score (0.001 in the emulation cohort).
++
++## Primary test and decision rule
++
++The coefficient of M:N for predicted Lp(a), two-sided at 0.05. To compare axes the
++product is expressed as r = b(M:N) / b(M), the fractional change in the exposure's own
++log hazard ratio per unit of N, which does not depend on the units of M. The ApoB
++reference r is re-estimated from the earlier discovery fit (expected about 0.29), and
++"half" means half of that value.
++
++| Verdict | Condition | Lead-grade |
++|---|---|---|
++| AMPLIFIED | 95% CI of b(M:N) above 0 and r at least half of ApoB's | yes |
++| AMPLIFIED_LESS_THAN_HALF | 95% CI of b(M:N) above 0 and r below half of ApoB's | no |
++| REVERSED | 95% CI of b(M:N) below 0 | yes |
++| NOT_AMPLIFIED_AXES_DIFFER | upper 95% limit of r below half of ApoB's, and r differs from ApoB's at P < 0.01 | yes |
++| INCONCLUSIVE | anything else | no |
++
++The axis contrast is r(Lp(a)) minus r(ApoB), with delta-method standard errors and the
++two estimates treated as independent (the exposures are nearly uncorrelated; the samples
++overlap). A lead-grade verdict is called robust only if the statin-free and spline
++versions give a product of the same sign whose interval lies on the same side of zero.
++
++## Secondary analyses (reported in full, no verdict)
++
++1. The M:L product and the earlier contrast D.
++2. Products beyond 4-df spline main effects.
++3. Statin-free participants; each sex; score windows of 250 and 1,000 kb.
++4. Measured Lp(a), with values below and above the assay range set to its limits.
++5. The same model with the 167-variant LDL-C score as M: the genetic comparator for the
++   ApoB axis.
++6. Additive scale: relative excess risk due to interaction for the top decile of
++   predicted Lp(a) with the top quintile of N.
++7. One model in the earlier discovery sample holding measured ApoB and predicted Lp(a)
++   together, with the difference of their r from a single covariance matrix.
++
++## Gates (nothing is read if any fails)
++
++The thirteen gates of the emulation (exposure model and cohort); the eligible cohort has
++379,654 participants and 15,978 events, and its statin-free part 324,626 and 11,740; the
++earlier lipid-region by non-lipid product is reproduced (0.01244, tolerance 1e-6); the
++discovery sample has 181,162 participants and 6,540 events and the earlier ApoB product
++is reproduced (0.05766, tolerance 1e-6); at least 99.9% of the eligible cohort has
++predicted Lp(a); the correlation of predicted Lp(a) with N is below 0.02 in absolute
++value.
++
++## Limits fixed in advance
++
++- The ApoB reference rests on measured ApoB, which is not randomized; its genetic
++  version was null. The comparison of a measured exposure with a genetic one is
++  therefore unequal, and secondary analysis 5 is there to show the genetic comparator.
++- A product on the log-hazard scale can be absent while risks still add; analysis 6
++  reports the additive scale.
++- Predicted Lp(a) is strongly skewed, so the product may be carried by its upper tail;
++  the squares in the model and the spline version address curvature, not this.
++- One cohort, European ancestry, healthy-volunteer selection.
++- The non-lipid against lipid distinction of the earlier work did not replicate
++  independently.
++
++## Expectation, written before the run
++
++The product for Lp(a) will be close to zero, r between -0.10 and +0.10. Most likely
++verdicts: INCONCLUSIVE or NOT_AMPLIFIED_AXES_DIFFER. Probability of AMPLIFIED about one
++in five. The LDL-C score comparator will also be close to zero.
++
++## Deviations
++
++None at the time of writing. Any change after this file is committed is listed here.

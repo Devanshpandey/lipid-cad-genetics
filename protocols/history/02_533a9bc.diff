@@ -1,0 +1,41 @@
+commit 533a9bc9146d9f01c7062aef49469f8c66b07c0a
+author date 2026-11-04T15:26:22-06:00
+commit date 2026-11-04T15:26:22-06:00
+
+fix(nature-round): drop two unpublished rows from B's positive control
+
+Jobs 3545604 and 3549233 both stopped on the cohort-flow rows while every
+genuine target matched exactly. Those two rows were never published values:
+402,119 traces to an unrelated Lp(a) diagnostic ("merged rows 402200 in-field
+402119") and the 376 "dropped" is the residual 402,119 - 21,847 - 379,896.
+The manuscript states no cohort flow at all. Both are now reported with no
+target and no pass/fail; the real start is 401,743. The estimates and the
+remaining counts stay hard stops. Recorded in PREREGISTERED_READOUT.md.
+
+Also points the Lp(a) LDSC job at data/reference/ldsc_fixed/eur.*: the hm3
+weights directory ships ldscore files with no .M/.M_5_50, which killed 3549578.
+
+No real result of B exists yet.
+
+Co-Authored-By: Claude Opus 5 
+
+
+diff --git a/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md b/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
+index 5b31a56..914a90b 100644
+--- a/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
++++ b/scripts/agent1_genetics/nature_round/PREREGISTERED_READOUT.md
+@@ -68,3 +68,14 @@ class or zero-inclusion the verdict file says LOCUS-SENSITIVE.
+ 
+ **External outcomes, A and C.** A palindromic variant ambiguous in either source (allele frequency 0.42-0.58) is dropped. The
+ published run_external_mr.R tests the UKB frequency only and has not been changed; the logs here count how many instruments that affects.
++
++**B, the cohort-flow rows of the positive control.** Recorded 2026-11-04, after jobs 3545604 and
++3549233 both stopped on them and no estimate of B had been read. Two rows the script enforced as
++"published" were not published values. The start of 402,119 traces to an unrelated Lp(a) diagnostic
++(logs/claude_jobs/lpa_diag_3542525.out, "merged rows 402200 in-field 402119"), and the 376 "dropped"
++is the residual 402,119 - 21,847 - 379,896 rather than a reported count; the manuscript states no
++cohort flow at all. Both rows are now printed and exported with no target and no pass or fail. The
++real start is 401,743. Everything else stays a hard stop: the four interaction and main-effect
++estimates against the manuscript (to 2 dp, plus the 5-dp full-precision pair), and the counts n,
++events, statin users, events in statin users and the prevalent exclusion, which come from a prior run
++of the paper's own script and so verify reproduction of that run, not agreement with a printed table.

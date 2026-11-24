@@ -1,0 +1,8 @@
+commit 08b8a16
+job 3602926
+date Sat Nov 21 15:22:19 CST 2026
+4cf4f34a0c4f97378c26e74557fcad39  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc3.R
+af96702bf5b9dcbba0bea8a6adb527a7  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_forecast.R
+408990dd06369cb0490f552f327b7b81  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc2.R
+03a7ee5e873ab0800c34cac935f92a0e  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc.R
+6e1c268df17113e7959d4078ee830b64  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_horizon.R

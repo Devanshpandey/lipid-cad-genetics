@@ -1,0 +1,129 @@
+# ============================================================================
+# Agent 6 - Metabolome resilience to polygenic CAD risk
+# Frozen analysis configuration. Every stage reads this file and records its
+# md5 in the stage manifest. Changing a value after the preregistration commit
+# is a documented deviation.
+# ============================================================================
+project: metabolome_resilience
+seed: 42
+date_frozen: "2026-09-23"
+
+# ---- UKB field IDs (all read from fid{ID}.csv, baseline = instance 0) ------
+fields:
+  eid_sample_list: ""              # set by --sample on the CLI (white British QC list)
+  assessment_date: 53
+  fasting_time: 74
+  lost_to_followup_date: 191
+  age: 21003
+  sex: 31                          # 1 = male, 2 = female (UKB coding, kept as-is)
+  genetic_sex: 22001
+  genetic_ethnic_grouping: 22006   # 1 = Caucasian
+  sex_aneuploidy: 22019
+  het_missing_outlier: 22027
+  genotype_batch: 22000
+  ancestry_pcs: 22009
+  n_pcs: 10
+  bmi: 21001
+  smoking_status: 20116            # 0 never 1 previous 2 current
+  alcohol_freq: 1558
+  physical_activity_ipaq: 22032
+  sleep_duration: 1160
+  townsend: 22189
+  medication_female: 6153          # value 1 = cholesterol lowering medication
+  medication_male: 6177            # value 1 = cholesterol lowering medication
+  treatment_codes: 20003
+  self_report_illness: 20002
+  vascular_heart_problems: 6150
+  hes_icd10_codes: 41270
+  hes_icd10_dates: 41280
+  hes_opcs4_codes: 41272
+  hes_opcs4_dates: 41282
+  death_date: 40000
+  death_cause_primary: 40001
+  nmr_spectrometer: 23650
+  nmr_shipment_plate: 23649
+  nmr_low_protein: 23655           # sample-level dilution flag -> exclusion
+  nmr_high_lactate: 23652          # 43,274 flagged at baseline -> technical covariate
+  nmr_high_pyruvate: 23653         # technical covariate
+  nmr_low_glucose: 23654           # technical covariate
+  nmr_field_table: nmr_fields.tsv  # field_id, title, units, class (primary|derived|qc)
+
+# ---- Statin identification (any of the three sources at baseline) ----------
+statin:
+  medication_value: 1              # in fields 6153 / 6177
+  treatment_codes:                 # UKB coding 4 (field 20003)
+    - 1140861958   # simvastatin
+    - 1140888594   # fluvastatin
+    - 1140888648   # pravastatin
+    - 1141146234   # atorvastatin
+    - 1141192410   # rosuvastatin
+    - 1140910632   # eptastatin
+    - 1140861970   # lipostat (pravastatin brand)
+    - 1140864592   # lescol (fluvastatin brand)
+    - 1141146138   # lipitor (atorvastatin brand)
+    - 1141192414   # crestor (rosuvastatin brand)
+
+# ---- Outcome definition: incident CAD --------------------------------------
+outcome:
+  name: CAD
+  icd10_prefixes: ["I21", "I22", "I23", "I241", "I252"]     # MI, complications, acute CAD, old MI
+  icd10_prefixes_broad: ["I20", "I21", "I22", "I23", "I24", "I25"]  # sensitivity (CLAUDE.md definition)
+  opcs4_prefixes: ["K40", "K41", "K42", "K43", "K44", "K45", "K46", "K49", "K50", "K75"]
+  death_icd10_prefixes: ["I21", "I22", "I23", "I24", "I25"]
+  self_report_20002: [1075, 1074, 1070, 1095]               # MI, angina, PTCA, CABG
+  self_report_6150: [1, 2]                                  # heart attack, angina
+  admin_censor_date: "2022-10-31"   # max HES date observed in the 2024-01-19 extract
+  landmark_years: 2.0               # events/censoring before baseline + 2y excluded
+  prevalent_window: "any_before_or_at_baseline"
+
+# ---- NMR processing ----------------------------------------------------------
+nmr:
+  use_class: ["primary"]            # 164 non-derived measures; derived (85) are secondary
+  zero_handling: "half_min_positive"  # replace 0 by half the smallest positive value, then log
+  log_transform: true
+  winsor_sd: 5
+  max_missing_frac_per_person: 0.10
+  technical_covariates: ["age", "age2", "sex", "age_sex", "fasting_time", "spectrometer", "genotype_batch",
+                         "qc_high_lactate", "qc_high_pyruvate", "qc_low_glucose"]
+  drop_low_protein: true
+
+# ---- Analysis samples --------------------------------------------------------
+samples:
+  primary: "statin_free"            # statin users excluded at baseline
+  sensitivity: ["all_with_statin_covariate"]
+
+# ---- PRS ----------------------------------------------------------------------
+prs:
+  cad_sumstats: "results/agent6_resilience/prs/cad_ukbfree_meta_sst.txt"   # fixed-effect meta, no UKB:
+  #   MVP EUR phecode 411.4 (Verma 2024; 124,302 / 300,039), CARDIoGRAMplusC4D 2015 (Nikpay; 60,801 / 123,504),
+  #   FinnGen R11 I9_CHD (51,098 / 402,635). Effective N ~ 696k. Nikpay-only PRS kept as sensitivity.
+  cad_n_gwas: "median per-SNP effective N from cad_ukbfree_meta_sst.txt.summary.json"
+  method: "PRS-CS-auto"
+  file: "results/agent6_resilience/prs/prs_cad_ukbfree.txt"   # FID IID PRS
+  sensitivity_file: "results/agent6_resilience/prs/prs_cad_nikpay.txt"
+  pathway_prs_file: ""              # optional: Agent 4 pathway PRS (FID IID <pathway columns>)
+
+# ---- Residual score (nested CV) ---------------------------------------------
+residual_score:
+  outer_folds: 5
+  inner_folds: 5
+  alpha: 0.5
+  lambda_rule: "lambda.min"
+  standardize_within_test_fold: true
+
+# ---- Tests -------------------------------------------------------------------
+tests:
+  covariates: ["age", "sex", "PC1", "PC2", "PC3", "PC4", "PC5", "PC6", "PC7", "PC8", "PC9", "PC10"]
+  top_prs_quantile: 0.90
+  cuminc_horizon_years: 10
+  n_permutations: 200
+  fdr_alpha: 0.05
+  meff_method: "li_ji"
+
+# ---- CHIP (somatic layer; Vlasschaert 2023 Blood curated calls, UKB return) --
+chip:
+  dir: "/path/to/ukb_chip"
+  ids_file: "CHIP_sample_ids.csv"           # 450,679 exome-screened IDs = denominator
+  variant_file: "CHIP_variant_info_UKB.csv" # 15,620 carriers, variant + VAF arrays
+  large_clone_vaf: 0.10
+  glyca_field: 23480                        # primary metabolite for H5a / H5d

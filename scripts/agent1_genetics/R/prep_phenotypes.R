@@ -24,9 +24,9 @@
 #
 # Usage:
 #   Rscript prep_phenotypes.R \
-#     --pheno_dir /path/to/ukb/phenotypes \
-#     --icd_file  /path/to/ukb/icd_codes.txt \
-#     --sample    /path/to/ukb/sample_eids.txt \
+#     --pheno_dir /path/to/.../pheno_split_into_files_011924 \
+#     --icd_file  /path/to/.../binary_ICD_011924.txt \
+#     --sample    /path/to/.../geno_qc_eids_400k_white_british_2023-11-29.txt \
 #     --out       /path/to/output_dir
 
 suppressPackageStartupMessages({
@@ -99,7 +99,14 @@ COVAR_FIELDS <- list(
   "20116" = "smoking",     # 0=never, 1=previous, 2=current
   "2443"  = "diabetes",    # 1=yes, 0/−7=no
   "4080"  = "sbp",         # Systolic BP (for hypertension flag)
-  "6153"  = "statin_med"   # Cholesterol-lowering medication (1=yes)
+  # Cholesterol-lowering medication (code 1 = yes). UK Biobank splits this
+  # touchscreen question BY SEX: 6153 is asked of women (it carries the extra
+  # "exogenous hormones" option), 6177 of men. Reading only 6153 ascertains
+  # statin use in women ONLY and leaves every male as NA -- which is what this
+  # pipeline did, capturing 27,549 of 70,227 true users (61% of users, all men,
+  # were missed). Both fields are required; take the union downstream.
+  "6153"  = "statin_med_f",  # women
+  "6177"  = "statin_med_m"   # men
 )
 
 PC_FIELD <- "22009"
@@ -169,6 +176,27 @@ pheno_dt  <- merge_all(base, pheno_list)
 biomark_dt <- merge_all(base, biomarker_list)
 covar_dt  <- merge_all(base, covar_list)
 if (!is.null(pc_dt)) covar_dt <- merge(covar_dt, pc_dt, by = "eid", all.x = TRUE)
+
+# ---- Unified statin-use indicator: union of the sex-specific fields ----
+# Only array slot -0.0 is needed: UK Biobank orders the multiple-select codes so
+# code 1 always occupies slot 0 (verified -- slots -0.1 to -0.3 hold zero code-1
+# values in both fields).
+{
+  has_f <- "statin_med_f" %in% names(covar_dt)
+  has_m <- "statin_med_m" %in% names(covar_dt)
+  if (has_f || has_m) {
+    f <- if (has_f) covar_dt$statin_med_f else NA_integer_
+    m <- if (has_m) covar_dt$statin_med_m else NA_integer_
+    covar_dt[, statin_med := as.integer((!is.na(f) & f == 1) | (!is.na(m) & m == 1))]
+    # answered either question at all -> observed; neither -> NA
+    covar_dt[is.na(f) & is.na(m), statin_med := NA_integer_]
+    message(sprintf("[prep] Statin use (6153 U 6177): %d users / %d with an answer (%.1f%%)",
+                    sum(covar_dt$statin_med == 1, na.rm = TRUE),
+                    sum(!is.na(covar_dt$statin_med)),
+                    100 * mean(covar_dt$statin_med == 1, na.rm = TRUE)))
+    if (!has_m) message("[prep] WARNING: fid6177.csv absent -- statin use is WOMEN-ONLY, LDL-C correction will be biased")
+  }
+}
 # Bring biomarkers into pheno_dt — drop FID/IID from biomark_dt to avoid x/y suffix collision
 biomark_extra <- setdiff(names(biomark_dt), c("eid", "FID", "IID"))
 pheno_dt <- merge(pheno_dt, biomark_dt[, c("eid", biomark_extra), with = FALSE], by = "eid", all.x = TRUE)
@@ -368,12 +396,11 @@ if (!is.null(icd_dt)) {
   )]
 
   # STATIN_USE binary phenotype (from field 6153 — separate from LDL correction)
-  statin_dt <- load_field("6153", opt$pheno_dir)
-  if (!is.null(statin_dt)) {
+  # Union of the sex-specific fields (see COVAR_FIELDS note above).
+  statin_dt <- covar_dt[, .(eid, STATIN_USE = statin_med)]
+  if (!is.null(statin_dt) && "statin_med" %in% names(covar_dt)) {
     statin_dt[, eid := as.character(eid)]
     bin_pheno <- merge(bin_pheno, statin_dt, by = "eid", all.x = TRUE)
-    setnames(bin_pheno, "6153", "STATIN_USE")
-    bin_pheno[, STATIN_USE := as.integer(STATIN_USE == 1)]
   } else {
     bin_pheno[, STATIN_USE := NA_integer_]
     message("[prep] WARNING: fid6153.csv not found — STATIN_USE set to NA")

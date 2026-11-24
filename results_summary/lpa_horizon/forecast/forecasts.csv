@@ -1,0 +1,585 @@
+trial,stratum,cohort,endpoint,role,central,lowering,model,scale,L0,L1,hr,lo,hi,ldl_score_nonpositive_draws_pct
+Lp(a)HORIZON,established disease,horizon,mace4,check,TRUE,0.715780296425458,linear,lifelong,229.4,65.2,0.819535958962029,0.760306842065596,0.884205150016271,0
+Lp(a)HORIZON,established disease,horizon,mace4,check,TRUE,0.715780296425458,linear,scaled to trial duration,229.4,65.2,0.802097308759081,0.637151347301453,0.890728381596958,0
+Lp(a)HORIZON,established disease,horizon,mace4,check,TRUE,0.715780296425458,spline,lifelong,229.4,65.2,0.875395237729469,0.774630093385969,0.992204272460594,0
+Lp(a)HORIZON,established disease,horizon,mace4,check,TRUE,0.715780296425458,spline,scaled to trial duration,229.4,65.2,0.861302077027611,0.685458207620822,0.991079964702987,0
+Lp(a)HORIZON,established disease,horizon,mace3,check,TRUE,0.715780296425458,linear,lifelong,229.4,65.2,0.890571189260177,0.819045823097819,0.96940853570329,0.77
+Lp(a)HORIZON,established disease,horizon,mace3,check,TRUE,0.715780296425458,linear,scaled to trial duration,229.4,65.2,0.812411663839983,0.386392840859993,0.963150604906508,0.77
+Lp(a)HORIZON,established disease,horizon,mace3,check,TRUE,0.715780296425458,spline,lifelong,229.4,65.2,0.938078049004213,0.815053334646591,1.08336562171754,0.685
+Lp(a)HORIZON,established disease,horizon,mace3,check,TRUE,0.715780296425458,spline,scaled to trial duration,229.4,65.2,0.89025068936149,0.478938041904326,1.20721971752156,0.685
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,linear,lifelong,225,45,0.776127447262302,0.708584309313546,0.851527991628162,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,linear,scaled to trial duration,225,45,0.817376888168476,0.687061516603027,0.894751027342014,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,spline,lifelong,225,45,0.835682738967802,0.731455534364717,0.954634630717818,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,spline,scaled to trial duration,225,45,0.864904482951318,0.726075643385502,0.965394306766472,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,linear,lifelong,225,22.5,0.7519252563403,0.678719727722495,0.834591187887458,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.79703087976146,0.655571517665743,0.882398947519489,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,spline,lifelong,225,22.5,0.802485541053221,0.700660346406313,0.919108575435877,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.837017636862302,0.687971299798162,0.938606187571583,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.735434185913362,0.65856664614262,0.82293626494901,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.783090767509202,0.634391263979176,0.873854092361152,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.780035314872628,0.679494505681648,0.89557228281293,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.818033580313533,0.663381356812382,0.921687420778002,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,linear,lifelong,250,50,0.754576681698763,0.681974864222462,0.836456295500186,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,linear,scaled to trial duration,250,50,0.799266303866363,0.658997893505735,0.883762936669226,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,spline,lifelong,250,50,0.845963501452059,0.70872899995006,1.00977163704018,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,spline,scaled to trial duration,250,50,0.873497366917006,0.712124888913209,1.00800649384074,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,linear,lifelong,250,25,0.728477768846827,0.650113843539624,0.817991255422707,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,linear,scaled to trial duration,250,25,0.777191320783209,0.625524795664723,0.870217388737219,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,spline,lifelong,250,25,0.808707342779677,0.677171152981972,0.964831708025597,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,spline,scaled to trial duration,250,25,0.842260738640385,0.675038954775181,0.972758326218767,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.710747512820553,0.628700992884486,0.805308801541479,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.762102609362072,0.603110489665209,0.860859226010525,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.78360864491807,0.656106204045115,0.935902848380991,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.821062139397074,0.648398975865245,0.951064977932145,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,linear,lifelong,275,55,0.733624317207126,0.656364682816376,0.821651362210879,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,linear,scaled to trial duration,275,55,0.781556994996076,0.632080553424467,0.872909786480384,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,spline,lifelong,275,55,0.856370740256012,0.685587811514259,1.07193989304063,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,spline,scaled to trial duration,275,55,0.882175621760408,0.694939752404898,1.05780711790139,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,TRUE,0.9,linear,lifelong,275,27.5,0.705761450661901,0.622713606660729,0.801721493899045,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,TRUE,0.9,linear,scaled to trial duration,275,27.5,0.757845604779485,0.596855201079452,0.858203996944258,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,TRUE,0.9,spline,lifelong,275,27.5,0.814977383153115,0.653553001218668,1.01673817245229,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,TRUE,0.9,spline,scaled to trial duration,275,27.5,0.847536683353963,0.657216045808606,1.01360724004237,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.686889509158761,0.600189731394838,0.788058922011979,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.741676969381016,0.573372118131275,0.848057603077714,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.787198344334706,0.630579729356756,0.981365549309395,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.824101910942234,0.630413081194695,0.985223589962088,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,linear,lifelong,300,60,0.713253737958048,0.631716239776411,0.807108470167427,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,linear,scaled to trial duration,300,60,0.764240070515255,0.606262675435264,0.86218991962369,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,spline,lifelong,300,60,0.866906011320619,0.661234597378898,1.13770334491814,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.8,spline,scaled to trial duration,300,60,0.89094009564691,0.676043888463071,1.11237798169722,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,linear,lifelong,300,30,0.683753501536329,0.59646820287527,0.785775336250576,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,linear,scaled to trial duration,300,30,0.738981439093796,0.569499616211638,0.846356450587445,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,spline,lifelong,300,30,0.821296036175659,0.629051881623216,1.07471464252525,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.9,spline,scaled to trial duration,300,30,0.852845676732097,0.638592369478337,1.0602488568717,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.663832358582571,0.572971440714736,0.771178538436471,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.72179877112698,0.545100096069671,0.835446349888028,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.790804488110379,0.606240004896884,1.03171696541288,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor3,primary,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.827152936460271,0.611751328853501,1.02572236455037,0
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,linear,lifelong,225,45,0.811248307940059,0.727484453617298,0.904806883470187,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,linear,scaled to trial duration,225,45,0.818086546845437,0.588649516221471,0.922180580972144,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,spline,lifelong,225,45,0.88189471062627,0.750492379710337,1.03238743773068,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,spline,scaled to trial duration,225,45,0.884110625097718,0.660066758019208,1.03176868783734,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,linear,lifelong,225,22.5,0.790311004982211,0.699119927782817,0.893563422515105,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.797809415213199,0.55092044595373,0.912888990135474,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,spline,lifelong,225,22.5,0.850844382565142,0.722218873376505,0.998283535088316,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.853592967885014,0.611643830455463,0.998507620967476,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.775977247266937,0.679925386345381,0.88577623420331,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.783915211328242,0.525958356477171,0.906440636188221,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.82976194780962,0.702142034798952,0.976113415864533,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.832859572548106,0.579346478067576,0.977829468503349,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,linear,lifelong,250,50,0.792610428652962,0.702216122680232,0.894805764466919,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,linear,scaled to trial duration,250,50,0.800037379714307,0.55499021199035,0.913916748610125,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,spline,lifelong,250,50,0.901355838210297,0.726803773013254,1.11270231111462,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,spline,scaled to trial duration,250,50,0.903226911369324,0.648412135375905,1.11721969813919,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,linear,lifelong,250,25,0.769914067595371,0.671861331187572,0.882459676914655,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,linear,scaled to trial duration,250,25,0.778034873519418,0.515609593495107,0.903691018338998,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,spline,lifelong,250,25,0.866163845109525,0.699345848476466,1.06795578333323,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,spline,scaled to trial duration,250,25,0.868652353578417,0.60257354215627,1.06780615821921,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.754414428570693,0.651397130052334,0.873918911505898,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.762994158521202,0.489717873655587,0.896601160376959,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.842350222017846,0.679131449697474,1.03947295451826,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.845240684463254,0.5703140932578,1.03920121894488,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,linear,lifelong,275,55,0.774400741993105,0.677825457990448,0.884915191021406,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,linear,scaled to trial duration,275,55,0.782386425260531,0.523255565353013,0.905726969993319,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,spline,lifelong,275,55,0.921246422374886,0.700912655759386,1.20167694680498,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,spline,scaled to trial duration,275,55,0.922756530984568,0.632319506716656,1.22024977963041,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,TRUE,0.9,linear,lifelong,275,27.5,0.750043549620812,0.645665543791652,0.871493910514776,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,TRUE,0.9,linear,scaled to trial duration,275,27.5,0.758750464546237,0.482561964902426,0.894585722307781,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,TRUE,0.9,spline,lifelong,275,27.5,0.881759134746921,0.673384441334331,1.14840559280752,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,TRUE,0.9,spline,scaled to trial duration,275,27.5,0.883977422221417,0.585768534365902,1.15467443791294,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.733450796450813,0.624065860113992,0.862220315241312,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.742631444733777,0.455974494604936,0.886868492757042,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.855129472261981,0.654724409949352,1.11092534026662,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.857805851334733,0.553535966882303,1.11450155993052,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,linear,lifelong,300,60,0.756609410525487,0.654281974825944,0.875133941238341,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,linear,scaled to trial duration,300,60,0.765124897852328,0.493335523325941,0.897610581512278,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,spline,lifelong,300,60,0.941575940112252,0.676662066125329,1.30108570057268,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.8,spline,scaled to trial duration,300,60,0.94270842105867,0.612085767885346,1.34056080734977,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,linear,lifelong,300,30,0.730685864832703,0.620491126800006,0.860664408735497,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,linear,scaled to trial duration,300,30,0.739944039840988,0.451632500458593,0.885572168271018,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,spline,lifelong,300,30,0.897635217747198,0.647445414825684,1.23421296328507,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.9,spline,scaled to trial duration,300,30,0.899572861085536,0.568345545335414,1.25404962597738,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.713069700739324,0.597881353469994,0.850678320639806,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.722812169068595,0.424556159607518,0.877241473918148,0.035
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.86810259582927,0.627541526013911,1.19157806406339,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,cor2,secondary,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.870557809284079,0.536185131593717,1.20143537368321,0.025
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,linear,lifelong,225,45,0.895304017087439,0.81315713149993,0.98881814808645,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,225,45,0.850717194580941,0.49156060383986,0.991318573101443,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,spline,lifelong,225,45,1.00122897201199,0.865050560649896,1.16046183553604,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,225,45,1.00186289079302,0.707106696445939,1.38529079395582,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,linear,lifelong,225,22.5,0.883012496372138,0.792403316535533,0.987429236892914,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.833697236929325,0.449804921554749,0.990238707537404,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,spline,lifelong,225,22.5,0.975776530536802,0.841709877395372,1.13325725690823,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.963523402002251,0.634750076217181,1.28609749156121,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.87450897587392,0.778191622475795,0.986458160003694,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.821986278897492,0.422704816834985,0.989483501639679,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.958345792158793,0.824652765718478,1.1152722429486,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.93756211686242,0.585434232478256,1.23700894767321,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,linear,lifelong,250,50,0.884369844939366,0.794682887821588,0.987583463968161,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,250,50,0.835571402022327,0.454263512584463,0.990358634485882,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,spline,lifelong,250,50,1.04855730565412,0.861653231619666,1.27542128826238,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,250,50,1.07449397442495,0.722453655011088,1.82718596548256,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,linear,lifelong,250,25,0.87088972446016,0.772179191121781,0.986042276595402,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,250,25,0.817017790742985,0.411596181437134,0.989160018310893,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,spline,lifelong,250,25,1.01898213665905,0.837095191391673,1.23966446001595,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,250,25,1.02890450699059,0.669574504506045,1.63328796303354,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.861576083518908,0.756806854429137,0.98496487671064,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.804275937634989,0.384136676464303,0.988321850251412,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.998777271307668,0.821596199053771,1.21575481716312,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.998147743383421,0.622759545500065,1.52937483566913,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,linear,lifelong,275,55,0.873569209688572,0.776628363366353,0.986350321539291,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,275,55,0.820695258453636,0.419796332900216,0.989399625434744,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,spline,lifelong,275,55,1.09812286097875,0.856744164312472,1.40428921237311,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,275,55,1.15239052337956,0.723257814832579,2.47295841429942,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,TRUE,0.9,linear,lifelong,275,27.5,0.858933384619567,0.752471236249253,0.984657264453631,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,TRUE,0.9,linear,scaled to trial duration,275,27.5,0.80067204354563,0.376633087992087,0.988082504140465,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,TRUE,0.9,spline,lifelong,275,27.5,1.06410080826501,0.832062413859483,1.35893909239626,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,TRUE,0.9,spline,scaled to trial duration,275,27.5,1.098722129951,0.671282045338247,2.15173919848413,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.848834452442261,0.736009741519357,0.983473853932302,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.786947179612604,0.349087543727988,0.987161562657489,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,spline,lifelong,275,8.25000000000001,1.04091450689596,0.814560747769891,1.3302348698249,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,1.062648436517,0.631457904856167,1.96034707051882,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,linear,lifelong,300,60,0.862900480475155,0.758984022467741,0.985118718874801,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,300,60,0.806083963163548,0.387944345639519,0.988441545047865,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,spline,lifelong,300,60,1.1500313919914,0.851235469259402,1.55238713641748,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,300,60,1.23593426299644,0.72092037710247,3.41191732390352,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,linear,lifelong,300,30,0.847141191924553,0.733266277947643,0.983274197731169,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,300,30,0.784653319155449,0.344639939312783,0.987006163746071,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,spline,lifelong,300,30,1.11121725240716,0.825216460147584,1.49264566561843,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,300,30,1.17327731644886,0.666583685357271,2.86200983399167,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.836281254129242,0.715784134936275,0.981985088246728,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.769991783319132,0.317236339755571,0.986002637256777,0.455
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,spline,lifelong,300,9.00000000000001,1.08482946277689,0.807266316713634,1.4557295681945,0.575
+OCEAN(a)-Outcomes,prior infarction and/or angioplasty,ocean,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,1.1313171893815,0.629971285980714,2.58237871528668,0.575
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,linear,lifelong,225,45,0.81086496744954,0.754813533442847,0.873370883025233,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,linear,scaled to trial duration,225,45,0.767048119862004,0.588546085538451,0.866567823442613,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,spline,lifelong,225,45,0.866514505580916,0.780259811354258,0.961708958856088,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,spline,scaled to trial duration,225,45,0.831173676628174,0.642262448475053,0.953990799383035,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,linear,lifelong,225,22.5,0.789890889570101,0.728735015995697,0.858714008359802,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.742036786499909,0.550811546021704,0.851192677902665,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,spline,lifelong,225,22.5,0.837684266923272,0.752924989172012,0.930851476895729,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.79565608960284,0.592404111329964,0.920477157815473,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.775532677610427,0.711018023750467,0.848600795842426,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.725015705241495,0.52584630571393,0.840592678524229,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.818075758721585,0.734122441578466,0.910897834207166,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.771700742870635,0.559757649218,0.898706726009129,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,linear,lifelong,250,50,0.79219429124254,0.731587555120047,0.860330327095338,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,linear,scaled to trial duration,250,50,0.744775054495907,0.554881861789194,0.852887466701613,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,spline,lifelong,250,50,0.877323464187911,0.762158751959276,1.00892600214784,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,spline,scaled to trial duration,250,50,0.84457923597127,0.633621690164567,1.01197338674861,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,TRUE,0.9,linear,lifelong,250,25,0.769459333516802,0.703557501304759,0.844303104769576,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,TRUE,0.9,linear,scaled to trial duration,250,25,0.717841004053529,0.515496350644536,0.836090327052517,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,TRUE,0.9,spline,lifelong,250,25,0.84495082699312,0.735079293435639,0.971176785274497,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,TRUE,0.9,spline,scaled to trial duration,250,25,0.804575185167797,0.58434725512666,0.964085861337004,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.753934203885213,0.684577939481871,0.833262033357274,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.699568845402163,0.48960195322066,0.824529551539825,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.823003379843428,0.715620671652993,0.945892787678558,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.777705190542745,0.549041460295745,0.935108393520068,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,linear,lifelong,275,55,0.77395351910591,0.709076251411038,0.847484483517799,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,linear,scaled to trial duration,275,55,0.723148740523833,0.523143196681619,0.83942307939274,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,spline,lifelong,275,55,0.888267254451406,0.744296871278437,1.05996672933451,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,spline,scaled to trial duration,275,55,0.858201006470175,0.618974527923517,1.07949990562828,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,linear,lifelong,275,27.5,0.749556266256412,0.679249860070965,0.83013404437796,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.694434179646485,0.482445383527754,0.821255930811621,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,spline,lifelong,275,27.5,0.852280421427266,0.714621352853336,1.01485149429522,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.813594261448965,0.570194600077715,1.01997967488975,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.732937244552269,0.659121062438187,0.818200524482936,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.675015128526495,0.455855770096675,0.808773379463952,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.827960682140468,0.695086233643989,0.985619646492514,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.783756357609879,0.536861287576715,0.982143136030992,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,linear,lifelong,300,60,0.756132752227862,0.687257631431396,0.834830444985566,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,linear,scaled to trial duration,300,60,0.702150397981783,0.493219950256981,0.826171252043821,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,spline,lifelong,300,60,0.899347558270299,0.725689179028668,1.11426801938036,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.8,spline,scaled to trial duration,300,60,0.872042475279933,0.600780428495852,1.15922738234059,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,linear,lifelong,300,30,0.730168017738373,0.655782038500573,0.816202768582217,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,linear,scaled to trial duration,300,30,0.671790587523091,0.451513474023372,0.806684734974927,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,spline,lifelong,300,30,0.859673597022414,0.69519249802274,1.06214792786397,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.9,spline,scaled to trial duration,300,30,0.822714439203887,0.554046749853277,1.08273659782042,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.712525047522133,0.634610830842987,0.803411257761357,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.651323206764165,0.424435568125379,0.793318296607069,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.832947844395155,0.674092669813529,1.02767351413243,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace4,primary,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.789854607586218,0.519819395023485,1.03504772386955,0.005
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,linear,lifelong,225,45,0.886803114947197,0.818232932630118,0.960259439869113,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,225,45,0.77121161636871,0.246439904733338,0.950235810245079,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,spline,lifelong,225,45,0.958915105550094,0.850604660242511,1.08136999652076,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,225,45,0.910101012865064,0.455900613725385,1.33567276060691,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,linear,lifelong,225,22.5,0.873585890802123,0.797970019157274,0.955404226915519,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.746569524623614,0.206859233890255,0.944192001732889,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,spline,lifelong,225,22.5,0.936672387899676,0.829948205710738,1.05810239078612,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.863383464244928,0.368027891784983,1.22845972236819,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.864451220960144,0.784085293493645,0.952020191706249,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.729790061191289,0.18299938398276,0.93998422250206,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.921410184748166,0.814454423689648,1.04262347902968,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.83211550990595,0.315393890704808,1.16974482770236,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,linear,lifelong,250,50,0.875044689030389,0.800196443661239,0.955942480465042,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,250,50,0.749268184040591,0.210922723155588,0.944861633224506,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,spline,lifelong,250,50,0.985886176274846,0.839776004880567,1.15712949517126,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,250,50,0.968587343577965,0.472182898754178,1.77993880334346,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,TRUE,0.9,linear,lifelong,250,25,0.860565660793805,0.77820890125764,0.950573562635603,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,TRUE,0.9,linear,scaled to trial duration,250,25,0.722714807799598,0.173635607863381,0.938186633809121,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,TRUE,0.9,spline,lifelong,250,25,0.960509891010149,0.819147337604774,1.12661823882141,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,TRUE,0.9,spline,scaled to trial duration,250,25,0.913503139550194,0.3947851311816,1.57056974547498,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.850573127632923,0.763178097444442,0.946833271750904,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.704689363161646,0.151530336373736,0.933542211732165,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.943136139047544,0.803756901364556,1.10717085844237,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.876818940042283,0.3429199316516,1.45808531334547,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,linear,lifelong,275,55,0.863442172105904,0.782557536997077,0.951644928462706,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,275,55,0.727949112409483,0.180524315668042,0.939517850533635,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,spline,lifelong,275,55,1.01361585289894,0.828192471576374,1.24126251075619,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,275,55,1.03083221409239,0.470129404368484,2.44803872773856,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,linear,lifelong,275,27.5,0.847739488852648,0.758937152347137,0.94576732290763,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.699622307347917,0.145748022755892,0.932219461979111,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,spline,lifelong,275,27.5,0.98495403798232,0.805862858344156,1.20385762258387,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.966532277402213,0.396942174069644,2.08646267315141,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.836917836321281,0.742828380092228,0.941674611849351,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.680451988812443,0.125472787672001,0.927144350113329,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.965374370178708,0.790675589890509,1.17896327965193,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.923923955826479,0.34862983157617,1.88069418433593,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,linear,lifelong,300,60,0.851993496923071,0.765307448643172,0.947366696613824,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,300,60,0.707236636420488,0.154506959082365,0.934204290273524,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,spline,lifelong,300,60,1.04212547246592,0.815836234513083,1.33232632422484,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,300,60,1.097077161555,0.451433299722304,3.47079477383986,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,linear,lifelong,300,30,0.835104482669271,0.740142653576551,0.940985384237445,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,300,30,0.677267668596806,0.122339457936325,0.926290243303259,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,spline,lifelong,300,30,1.01002026737841,0.792527754360619,1.28706448596404,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,300,30,1.02263977299552,0.390589216054821,2.79867978962558,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.823481770111806,0.7230212765791,0.936544058031462,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.657048244635699,0.103896162505372,0.920790335077341,1.29
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.98813695713017,0.776587817079284,1.25844149476694,1.485
+ACCLAIM-Lp(a),established disease,acc_est,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.973559576745553,0.344689075469673,2.5137431912454,1.485
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,linear,lifelong,225,45,0.73677052081224,0.658751740806265,0.821668952542918,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,linear,scaled to trial duration,225,45,0.714217227671933,0.504182901078981,0.830945782244318,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,spline,lifelong,225,45,0.729257778357372,0.611108778058073,0.873376248230963,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,spline,scaled to trial duration,225,45,0.70635549208788,0.474696026749965,0.871824443718275,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,linear,lifelong,225,22.5,0.709167412732581,0.625261945901665,0.80174080305169,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.68479268388756,0.462819476746775,0.811931281154467,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,spline,lifelong,225,22.5,0.702476283666397,0.588677194369117,0.841565738950377,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.677847031150031,0.441409020722627,0.842683323967333,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.69046289046081,0.60283735165586,0.788079378359817,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.664919799068535,0.435901222375132,0.798880616587713,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.684316614207395,0.572959582236892,0.820989774000327,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.658578515253838,0.419636184940359,0.824051362423474,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,linear,lifelong,250,50,0.712182632603683,0.628897330080701,0.803930956919904,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,linear,scaled to trial duration,250,50,0.688001280037809,0.467242509333744,0.814022332341737,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,spline,lifelong,250,50,0.701556396131487,0.551774897019724,0.895663620852329,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,spline,scaled to trial duration,250,50,0.676869752405445,0.41814410282979,0.892068710396708,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,TRUE,0.9,linear,lifelong,250,25,0.682598455116512,0.593474714031586,0.7822959761225,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,TRUE,0.9,linear,scaled to trial duration,250,25,0.656580381622115,0.424849529009259,0.793351888178775,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,TRUE,0.9,spline,lifelong,250,25,0.672988581579447,0.530660550527686,0.857255955751489,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,TRUE,0.9,spline,scaled to trial duration,250,25,0.646584843771159,0.388749070165043,0.853010549353003,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.662623824307787,0.569872825520383,0.767498856715454,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.635443528458207,0.39748440724486,0.779195682878696,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.653686130992716,0.516282641614875,0.831450440133891,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.626195308715756,0.367302033458659,0.829683297097728,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,linear,lifelong,275,55,0.688415304161673,0.600395911362014,0.786575884965428,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,linear,scaled to trial duration,275,55,0.662747610942659,0.433008660275289,0.797443553732024,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,spline,lifelong,275,55,0.674907270871518,0.498477109595674,0.918865869103634,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,spline,scaled to trial duration,275,55,0.648614850246549,0.367668786717018,0.914368340636746,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,linear,lifelong,275,27.5,0.657024903516188,0.563303489847004,0.763322749608255,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.629530378571958,0.389994655301932,0.775197646754593,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,spline,lifelong,275,27.5,0.644738678681717,0.4774690598911,0.875234283423757,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.616764463045999,0.338841965595097,0.870433482409808,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.63590721327144,0.538710875121827,0.747455790921358,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.607273957588676,0.362453340101774,0.759995798634776,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.6244266893142,0.463203892700517,0.846708696820048,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.595404428743754,0.320785440624176,0.840555088493968,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,linear,lifelong,300,60,0.665441151339806,0.573186167500533,0.769595470213569,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,linear,scaled to trial duration,300,60,0.638420899138538,0.401283051368722,0.781202426670327,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,spline,lifelong,300,60,0.64927043183834,0.448487179856635,0.94456863568977,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.8,spline,scaled to trial duration,300,60,0.621539406163852,0.321818788414403,0.940346886751114,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,linear,lifelong,300,30,0.63240946504453,0.534666118322579,0.744809685662125,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,linear,scaled to trial duration,300,30,0.603594789972025,0.357999293349844,0.757458828154925,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,spline,lifelong,300,30,0.617674616131915,0.429482306819228,0.89308202175223,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.9,spline,scaled to trial duration,300,30,0.588319393102031,0.29587740621912,0.888617665911229,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.610267800607809,0.50925293149323,0.727936145434756,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.580353159721678,0.330509628447547,0.741269011924216,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.596476920407902,0.415736168313933,0.861268394112861,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace4,primary,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.566127578462256,0.277859653370108,0.856158406476774,0
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,linear,lifelong,225,45,0.762392472152051,0.679931421008445,0.856776010672228,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,225,45,0.688532980375093,0.369303639710009,0.839345777010051,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,spline,lifelong,225,45,0.751152046493629,0.622644169532647,0.908416423211856,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,225,45,0.674887925882858,0.32806380820306,0.889120910636411,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,linear,lifelong,225,22.5,0.736971892201959,0.647922781213358,0.840380003886584,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.657151254073491,0.326066766415136,0.821170848257996,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,spline,lifelong,225,22.5,0.726910079171688,0.601545979526523,0.879213331689533,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.645139961446971,0.295256665730925,0.857309585199544,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.719683509899476,0.626417594421692,0.829089850708148,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.636039015136134,0.298849546238367,0.808683073523395,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.710407725888813,0.586984100792418,0.86034460094219,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.625100064561622,0.272177376555079,0.837246721440848,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,linear,lifelong,250,50,0.739754017969888,0.651403553882056,0.842186176749025,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,250,50,0.660566258325072,0.33060932421914,0.823170692341638,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,spline,lifelong,250,50,0.723822531817448,0.562947600433224,0.933899260166808,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,250,50,0.641377475267651,0.272154939040741,0.919093616581856,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,TRUE,0.9,linear,lifelong,250,25,0.712398914908769,0.61742098900605,0.824297765268399,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,TRUE,0.9,linear,scaled to trial duration,250,25,0.627199833615964,0.287891926156813,0.803389473681696,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,TRUE,0.9,spline,lifelong,250,25,0.697914008886537,0.543795998081712,0.899238144529628,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,TRUE,0.9,spline,scaled to trial duration,250,25,0.610043336380341,0.241435195108694,0.877298730380104,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.693854470685371,0.594693613947938,0.812002435705343,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.604851299789642,0.26131813901533,0.789826140656212,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.680331826621838,0.529507614494307,0.876133882270084,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.589024794337738,0.223704515759641,0.851600438769125,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,linear,lifelong,275,55,0.717787789218166,0.624072629826235,0.827844789621104,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,275,55,0.633735484101104,0.295969260840613,0.807307318736098,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,spline,lifelong,275,55,0.697487359599524,0.50647857235495,0.96490977447426,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,275,55,0.609530930995063,0.224541875952012,0.955274287293124,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,linear,lifelong,275,27.5,0.688645278515065,0.588355107612342,0.808523290278623,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.598613529000281,0.254186472504328,0.785993131383128,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,spline,lifelong,275,27.5,0.670074576975337,0.489317142525537,0.921376702471642,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.576856022726238,0.199241548479169,0.903623564206811,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.668952421262677,0.564576246931612,0.79526718971236,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.575192851619198,0.228500162196093,0.771408915171469,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.651529223919291,0.47649374054608,0.894190601834604,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.555031470982055,0.181147129476632,0.871460715220313,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,linear,lifelong,300,60,0.696473824859543,0.597888428727856,0.813747618547356,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,linear,scaled to trial duration,300,60,0.607994517956771,0.264958659522127,0.791749649190143,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,spline,lifelong,300,60,0.67211035221519,0.456695741734683,0.995674602178272,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.8,spline,scaled to trial duration,300,60,0.579265674530693,0.183406797556711,0.997270217745465,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,linear,lifelong,300,30,0.665683663599939,0.560657539697272,0.793050689286259,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,linear,scaled to trial duration,300,30,0.571330121432368,0.224427144151807,0.768973483994762,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,spline,lifelong,300,30,0.643345645726496,0.438518581626667,0.948385965365716,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.9,spline,scaled to trial duration,300,30,0.545474150951249,0.162902646984973,0.933720100812785,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.64494409248552,0.535984128841429,0.778876854579762,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.546988684109447,0.19980367351253,0.753421143939258,0.085
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.623946011358405,0.427552427871649,0.915837586313642,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, high-risk factors",acc_risk,mace3,secondary,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.522999942857867,0.148035317853079,0.895826895168163,0.055
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,linear,lifelong,225,45,0.702427656352395,0.672751109250987,0.733699930891954,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,225,45,0.671005505875132,0.602461796798101,0.726475893438787,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,spline,lifelong,225,45,0.702636096267662,0.659220998303677,0.749368087655305,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,225,45,0.671222008841406,0.593142806189369,0.737184564160061,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,linear,lifelong,225,22.5,0.67208902384176,0.640230301916129,0.705843285822228,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.638361731753816,0.565484495370559,0.698029631175471,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,spline,lifelong,225,22.5,0.672270150363484,0.630639894420702,0.717480115870533,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.638547054163091,0.558568577668263,0.705419540358136,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.651635060562862,0.61840570479563,0.686975351206906,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.616460673665283,0.540959228652099,0.678782620869912,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.651798247703583,0.610766204977295,0.696379676093804,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.616625680723292,0.535483368551807,0.684433214369093,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,linear,lifelong,250,50,0.675394214525299,0.643764666049654,0.708885489797062,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,250,50,0.641908943177812,0.569478373998567,0.701134507120202,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,spline,lifelong,250,50,0.675694168487213,0.620555065400456,0.736461936450911,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,250,50,0.642222028102085,0.552989662110714,0.72160872642177,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,TRUE,0.9,linear,lifelong,250,25,0.643060750646125,0.609281551312457,0.679044283859541,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,TRUE,0.9,linear,scaled to trial duration,250,25,0.607306045926192,0.530776750001406,0.670697225331656,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,TRUE,0.9,spline,lifelong,250,25,0.64332687550557,0.590892942031043,0.701006622343873,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,TRUE,0.9,spline,scaled to trial duration,250,25,0.607580424062209,0.518259377619071,0.685788970199419,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.621352814746116,0.586248375853924,0.658906065326152,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.58419996886742,0.505261432543465,0.650180779890908,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.621596787885474,0.5709506790677,0.677388007519538,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.584449208922659,0.495030802046267,0.662603567083814,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,linear,lifelong,275,55,0.649401174468279,0.616027145188114,0.684910297093682,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,275,55,0.614074083929102,0.538300719108901,0.676677094883838,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,spline,lifelong,275,55,0.649785303876138,0.583422212674153,0.724639021133962,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,275,55,0.614474984352023,0.514623485674278,0.707439290092706,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,linear,lifelong,275,27.5,0.615286240887815,0.579828864173856,0.653262769093551,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.57776118942033,0.49819926213441,0.644435061174658,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,spline,lifelong,275,27.5,0.615629696668798,0.553359843340673,0.685733761434577,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.578115534786146,0.480183712921917,0.66847938719655,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.59247782042212,0.555763240096476,0.631983668934917,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.553627535712039,0.471919327177359,0.622784133746019,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.592794730686747,0.532949899586809,0.659756871604305,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.553951754668494,0.456540984939644,0.642966887927313,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,linear,lifelong,300,60,0.624408495558683,0.589484735062094,0.661745968589725,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,300,60,0.58744621735066,0.508829970414107,0.653072821393026,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,spline,lifelong,300,60,0.624869890587778,0.547971715043282,0.713081848798126,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,300,60,0.587926744758745,0.478762879860358,0.694105489809533,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,linear,lifelong,300,30,0.588711343128122,0.551799920750809,0.628460110227581,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,300,30,0.549653661839162,0.467621282941686,0.619201231772617,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,spline,lifelong,300,30,0.589124965629133,0.517716724076704,0.671342313298626,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,300,30,0.55007955872991,0.443425693348692,0.652071424277534,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.564944680962903,0.526863342849576,0.606161301008423,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.524655023335244,0.440777460971907,0.596541899180049,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.565327233953979,0.497267130833405,0.643718838265496,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.52504570425539,0.421002586419412,0.624552146647618,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,linear,lifelong,225,45,0.745776851020156,0.711938857836371,0.781762217447108,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,linear,scaled to trial duration,225,45,0.618397196866408,0.497556903010498,0.705604253680892,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,spline,lifelong,225,45,0.747060958872932,0.695623197845882,0.802138555717026,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,spline,scaled to trial duration,225,45,0.620068651588969,0.489211540646674,0.720868201257795,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,linear,lifelong,225,22.5,0.718927358829462,0.682335606374209,0.758069479265268,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.582339100553051,0.45598242135572,0.675509310144545,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,spline,lifelong,225,22.5,0.720056023537603,0.67037052908019,0.774062135964319,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.583759195574965,0.449936798142247,0.685946248808077,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.700709958388647,0.662348825779641,0.741913111182595,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.558356863078051,0.4289649830123,0.655209888419902,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.701735521027311,0.653043392826206,0.755238951235916,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.559615205366049,0.424485418576876,0.662562453464706,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,linear,lifelong,250,50,0.721862251719923,0.685563112243152,0.76066614186544,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,linear,scaled to trial duration,250,50,0.586239414178878,0.460424704153193,0.678788781196634,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,spline,lifelong,250,50,0.723715069451649,0.657676434537291,0.795343415197143,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,spline,scaled to trial duration,250,50,0.588628859468414,0.444660246769035,0.707693733494887,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,TRUE,0.9,linear,lifelong,250,25,0.693044503280696,0.653963292776286,0.735094792979561,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,TRUE,0.9,linear,scaled to trial duration,250,25,0.548383514271,0.417881788652438,0.646697955279511,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,TRUE,0.9,spline,lifelong,250,25,0.694706277647605,0.63165388154664,0.763513794948542,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,TRUE,0.9,spline,scaled to trial duration,250,25,0.550457417040737,0.406964029939796,0.668419623319586,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.673559362787713,0.632714114909525,0.717708069057077,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.523348464237735,0.390462943608146,0.625141413204054,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.675094778046504,0.613819880971112,0.742335464572017,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.525219995661363,0.382001492657557,0.642974508206081,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,linear,lifelong,275,55,0.698714514596906,0.660164529151941,0.740139349877968,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,linear,scaled to trial duration,275,55,0.555753894872583,0.426063646012491,0.652992392087799,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,spline,lifelong,275,55,0.70109874640162,0.620940107196882,0.789901198093953,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,spline,scaled to trial duration,275,55,0.558783182009278,0.402461226759116,0.697036144071141,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,linear,lifelong,275,27.5,0.668093483477407,0.626770733204653,0.712816396709973,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.516407842850689,0.382964739669091,0.619115442351507,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,spline,lifelong,275,27.5,0.670248975672639,0.594605930919346,0.754174565487034,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.519055408928884,0.366574942274823,0.652935837845026,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.647460778554194,0.604405315785873,0.694292720570178,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.49053505586034,0.355416680544277,0.596452821316871,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.64946542634532,0.576603690971329,0.7305945356039,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.49293879293734,0.342507207364937,0.624419888986337,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,linear,lifelong,300,60,0.676309048915068,0.635706906873123,0.720166479205137,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,linear,scaled to trial duration,300,60,0.526853678200156,0.394266920989814,0.628176357559782,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,spline,lifelong,300,60,0.679189190544778,0.586412155736133,0.785121924630391,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.8,spline,scaled to trial duration,300,60,0.530450791655702,0.364194217500948,0.688654263450768,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,linear,lifelong,300,30,0.644040751426603,0.600708872105283,0.691213188110183,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,linear,scaled to trial duration,300,30,0.486296639519174,0.350965262935831,0.592709359646009,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,spline,lifelong,300,30,0.646652698909536,0.559228177910265,0.745730562936689,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.9,spline,scaled to trial duration,300,30,0.489444794815785,0.329007254012185,0.639465337147833,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.622373443123118,0.577363104666093,0.671641301831893,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.459779014310055,0.323516018299978,0.569080788030806,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.624809069385,0.540948544431331,0.720002685593921,0
+ACCLAIM-Lp(a),"at risk: age 55+, no vascular disease",acc_risk_55,mace3,sensitivity,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.46264166556825,0.306156622470481,0.608272267906391,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,linear,lifelong,225,45,0.730036777551662,0.671008393430887,0.793101581294206,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,225,45,0.706387193806113,0.560075834367136,0.799763937915819,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,spline,lifelong,225,45,0.701627997986291,0.617696556072399,0.798322719769089,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,225,45,0.677208968546112,0.513708395069479,0.798207518938075,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,linear,lifelong,225,22.5,0.701879942516448,0.638364822221111,0.770450812953043,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.676352608648356,0.520927984866534,0.777735718107893,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,spline,lifelong,225,22.5,0.676831019168114,0.595103726480494,0.770251470287916,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.650929413435161,0.483789220339004,0.773013094437481,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.682818841720998,0.616463890229695,0.754981290153712,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.656091507000307,0.495164255783714,0.762677973206206,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.659996442310983,0.579566005203258,0.75220505026494,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.6331428883786,0.4632574377251,0.756872998195695,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,linear,lifelong,250,50,0.704954068906934,0.641912012451723,0.772935276221783,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,250,50,0.679625705673269,0.525138985237321,0.780153025834372,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,spline,lifelong,250,50,0.664645299427091,0.560137559492014,0.789914907513013,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,250,50,0.638050141886806,0.455499064612329,0.787572036327716,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,TRUE,0.9,linear,lifelong,250,25,0.674809090247553,0.6073093127288,0.748446944477969,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,TRUE,0.9,linear,scaled to trial duration,250,25,0.647595051604229,0.484516468606707,0.756314230427961,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,TRUE,0.9,spline,lifelong,250,25,0.638597164305773,0.538507701629499,0.758323321918518,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,TRUE,0.9,spline,scaled to trial duration,250,25,0.610599068981037,0.427527698184509,0.757169529221255,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.654477915080257,0.58420335579901,0.731768218182226,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.62607610515476,0.45796526651412,0.740061828203649,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.620973288803543,0.523813835095901,0.737729297173494,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.59208910196054,0.408633194832449,0.737559347132727,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,linear,lifelong,275,55,0.680733155574857,0.614077313732682,0.75328174261533,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,275,55,0.653878076870498,0.492381454253655,0.761022990497704,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,spline,lifelong,275,55,0.62961195294142,0.50751864884546,0.784282894964596,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,275,55,0.6011556291639,0.403480372034908,0.778262251746393,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,linear,lifelong,275,27.5,0.648782335406399,0.577764608087565,0.727071500582375,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.620060225243139,0.450650022984171,0.73548276340844,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,spline,lifelong,275,27.5,0.602523121296369,0.486540226719716,0.747765039684286,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.572767515717197,0.376376562527128,0.744667037753777,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.627313300623331,0.553631066371179,0.709268868150188,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.597433872049149,0.423560834381237,0.718116333254196,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.584257430323836,0.471907480056791,0.723731227473531,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.55369729502641,0.358824290161291,0.722034624067518,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,linear,lifelong,300,60,0.657344427868078,0.587449587991288,0.734127942162894,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,300,60,0.629105897323739,0.461667298201226,0.742362040386555,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,spline,lifelong,300,60,0.59642520849603,0.460159694472518,0.778339967052083,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,300,60,0.566394499038536,0.356178019496163,0.770134708234098,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,linear,lifelong,300,30,0.623759408132703,0.54965720986392,0.706306533628883,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,300,30,0.593696140784504,0.419150754155867,0.715225065872442,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,spline,lifelong,300,30,0.568486883419499,0.439090497350602,0.738787572250114,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,300,30,0.537279933309296,0.331163068960559,0.732798745361492,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.601276174598927,0.524658673403905,0.687461295568399,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.57010198685575,0.391741019551864,0.696821601171012,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.549712445033375,0.424989969477188,0.712495660760065,0
+ACCLAIM-Lp(a),at risk: high-risk factors or vascular disease without event,acc_risk_recorded,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.517794861456502,0.314158110397011,0.709020913712244,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,linear,lifelong,225,45,0.694446313194569,0.668481833046034,0.721613436448349,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,225,45,0.706450573305083,0.6569575421631,0.748482435218526,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,spline,lifelong,225,45,0.692965904020322,0.655115730353824,0.732722449314791,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,225,45,0.705065695750877,0.64960956472384,0.754046943623266,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,linear,lifelong,225,22.5,0.663503947700465,0.635661356475604,0.692775766574833,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.676420879309964,0.623346414505455,0.721862223270812,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,spline,lifelong,225,22.5,0.662223333220378,0.625824702866015,0.700339912020085,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.675230889842741,0.617998453764666,0.725403642334329,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.642668324805196,0.613650582967604,0.673277871849723,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.656162883671146,0.600847114353954,0.703793426097596,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.641518681026683,0.605810298054549,0.679109482492672,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.655100911183153,0.596758794363618,0.706346100623377,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,linear,lifelong,250,50,0.666872753851826,0.639227015698624,0.69592218128957,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,250,50,0.679693459750785,0.626994411454305,0.724772643173089,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,spline,lifelong,250,50,0.664739028286515,0.616229910460002,0.716317244886842,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,250,50,0.67767471784449,0.613429396319811,0.736709828788798,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,TRUE,0.9,linear,lifelong,250,25,0.633940277670905,0.604452268022415,0.665090529793262,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,TRUE,0.9,linear,scaled to trial duration,250,25,0.647667682999915,0.591454892499528,0.696188774601578,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,TRUE,0.9,spline,lifelong,250,25,0.632053849191146,0.586289505128376,0.680629868557708,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,TRUE,0.9,spline,scaled to trial duration,250,25,0.645888624225336,0.581657525600298,0.704636757205246,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.611860061414421,0.58124179405715,0.644324764050846,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.626151784804929,0.567782757567874,0.676853491047145,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.610135243904378,0.56612211293249,0.65715303147685,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.624529679140408,0.559614366231777,0.683342169281415,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,linear,lifelong,275,55,0.640394025254644,0.611252478974805,0.671145599497876,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,275,55,0.653949783162655,0.598397867083701,0.701813909819847,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,spline,lifelong,275,55,0.637661929921362,0.579602784376209,0.700800893229487,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,275,55,0.651347847403818,0.578502728873687,0.72044495074976,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,linear,lifelong,275,27.5,0.605693872728683,0.574775453306184,0.638511671688099,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.620136723204635,0.561194998032011,0.671428417025667,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,spline,lifelong,275,27.5,0.603258822570662,0.548748048188215,0.66248417147892,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.617821431423043,0.545872678907064,0.685566279510825,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.582528685955603,0.550544613719793,0.616616732744579,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.597513311665603,0.536537918032661,0.650944767817838,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.580287101317898,0.528116651094178,0.63635168064483,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.595385097881774,0.523974312052159,0.662165784012012,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,linear,lifelong,300,60,0.614966656252038,0.584502193863843,0.647251126398505,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,linear,scaled to trial duration,300,60,0.629181159187973,0.571105580510325,0.679582443758263,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,spline,lifelong,300,60,0.611687774552901,0.544711555810192,0.68586511750775,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.8,spline,scaled to trial duration,300,60,0.626043745097988,0.544737583690432,0.705898428719013,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,linear,lifelong,300,30,0.578706039642931,0.546555682228195,0.612994978305702,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,linear,scaled to trial duration,300,30,0.593776045279431,0.532483254107868,0.647548675928718,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,spline,lifelong,300,30,0.575775636008008,0.513557368280799,0.644439880967888,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.9,spline,scaled to trial duration,300,30,0.590973902944063,0.512056523286157,0.667414153466048,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.554603399307873,0.521468646602723,0.590100235648578,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.570184684099914,0.507012468501088,0.626027783492676,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.551899145837087,0.492569493541607,0.617671801008858,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace4,sensitivity,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.567600590683848,0.48977281176376,0.642518235351199,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,linear,lifelong,225,45,0.743022236984681,0.712654914022735,0.774892694901472,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,linear,scaled to trial duration,225,45,0.690963732252603,0.617382355870478,0.749489420275407,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,spline,lifelong,225,45,0.747434825076769,0.702228348521914,0.796226904484636,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,spline,scaled to trial duration,225,45,0.695899857011631,0.612423362122082,0.766221964973018,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,linear,lifelong,225,22.5,0.715940676629522,0.683107721842825,0.750579610377426,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,linear,scaled to trial duration,225,22.5,0.659761788723365,0.581264085869915,0.722954882533664,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,spline,lifelong,225,22.5,0.719809098205949,0.675704651223678,0.767455493696703,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,spline,scaled to trial duration,225,22.5,0.664013329037123,0.577564690552729,0.735458023879041,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,linear,lifelong,225,6.75000000000001,0.697573054173991,0.663156654555319,0.734015785216154,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,linear,scaled to trial duration,225,6.75000000000001,0.638762620042217,0.55724603120758,0.704941660142822,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,spline,lifelong,225,6.75000000000001,0.701080896996024,0.65725116595919,0.748007384657695,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,spline,scaled to trial duration,225,6.75000000000001,0.642566133409871,0.554164259433093,0.715202319582453,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,linear,lifelong,250,50,0.718900324006542,0.686329297155788,0.753242947494068,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,linear,scaled to trial duration,250,50,0.663157899312603,0.585170547893693,0.725856153716414,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,spline,lifelong,250,50,0.725284562574337,0.667500290582593,0.788993200787029,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,spline,scaled to trial duration,250,50,0.670309808150957,0.573966496497861,0.7559802182708,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,TRUE,0.9,linear,lifelong,250,25,0.689846180826087,0.654785577787586,0.727029374803973,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,TRUE,0.9,linear,scaled to trial duration,250,25,0.629968835615125,0.547258816695227,0.697359759911232,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,TRUE,0.9,spline,lifelong,250,25,0.6955608082677,0.640278412808417,0.756431108474362,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,TRUE,0.9,spline,scaled to trial duration,250,25,0.636271244623576,0.53975906521232,0.721275118242263,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,linear,lifelong,250,7.50000000000001,0.670209799666698,0.633571600791212,0.709224577712141,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,linear,scaled to trial duration,250,7.50000000000001,0.607729822327651,0.522191721222844,0.678080581904071,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,spline,lifelong,250,7.50000000000001,0.675481987069192,0.621535216917899,0.734960588338944,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,spline,scaled to trial duration,250,7.50000000000001,0.613478012484569,0.516734872253266,0.697796152229788,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,linear,lifelong,275,55,0.695561519065769,0.660976153908236,0.732198072949618,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,linear,scaled to trial duration,275,55,0.636471031535892,0.554639384922824,0.702968102864461,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,spline,lifelong,275,55,0.703790724033522,0.6337145791354,0.783033994681437,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,spline,scaled to trial duration,275,55,0.645660771986425,0.536553260799398,0.746542907391951,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,linear,lifelong,275,27.5,0.664702773197221,0.627637690468818,0.704218052981902,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,linear,scaled to trial duration,275,27.5,0.601521246955208,0.515242932999109,0.672670793838657,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,spline,lifelong,275,27.5,0.672129373196102,0.605850443896373,0.74691555804254,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,spline,scaled to trial duration,275,27.5,0.60968820809951,0.502607702254883,0.708141799258467,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,linear,lifelong,275,8.25000000000001,0.643919906139665,0.605306409235312,0.685270687309397,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,linear,scaled to trial duration,275,8.25000000000001,0.578204680984601,0.48934254968628,0.652243017474965,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,spline,lifelong,275,8.25000000000001,0.650817782669568,0.58665221372983,0.72303377701143,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,spline,scaled to trial duration,275,8.25000000000001,0.585706672408695,0.479558537127864,0.682835610514729,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,linear,lifelong,300,60,0.672980398880274,0.636559560907593,0.711741171709272,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,linear,scaled to trial duration,300,60,0.610858099412318,0.525701179621663,0.680801769213803,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,spline,lifelong,300,60,0.682933856302589,0.601418469954648,0.77745624388952,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.8,spline,scaled to trial duration,300,60,0.621918145032161,0.501659220180773,0.738325341957554,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,linear,lifelong,300,30,0.640475788627238,0.601615374346301,0.682122460704401,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,linear,scaled to trial duration,300,30,0.574358269937665,0.485100051212826,0.648855903215764,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,spline,lifelong,300,30,0.649487275509515,0.572828166984472,0.738009690414763,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.9,spline,scaled to trial duration,300,30,0.584215795129174,0.466713456316716,0.696016950042969,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,linear,lifelong,300,9.00000000000001,0.618661269544426,0.578302197579579,0.662125833823182,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,linear,scaled to trial duration,300,9.00000000000001,0.550113950031333,0.458559799402265,0.627389966912567,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,spline,lifelong,300,9.00000000000001,0.627054154436758,0.553495658384748,0.712100018055445,0
+ACCLAIM-Lp(a),at risk: all primary prevention,primary_prevention,mace3,sensitivity,FALSE,0.97,spline,scaled to trial duration,300,9.00000000000001,0.559192504250827,0.444018907701377,0.668674524200995,0

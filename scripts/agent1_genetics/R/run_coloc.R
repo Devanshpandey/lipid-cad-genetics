@@ -8,7 +8,11 @@
 #     --lipid_trait  LDL_C \
 #     --outcome      CAD \
 #     --sumstat_dir  /path/to/gwas_summary_stats/merged \
+#     --sentinels    /path/to/sentinels_LDL_C.tsv \
 #     --out          /path/to/coloc_results.csv
+#
+# Sentinels come from make_coloc_sentinels.R — run that first, once per
+# exposure. This script no longer derives them (see --sentinels below).
 
 suppressPackageStartupMessages({
   library(data.table)
@@ -22,9 +26,13 @@ opt_list <- list(
   make_option("--lipid_trait",  type = "character"),
   make_option("--outcome",      type = "character"),
   make_option("--sumstat_dir",  type = "character"),
+  # Sentinels are defined ONCE per exposure by make_coloc_sentinels.R and
+  # cached. They are never derived here: doing so re-ran an expensive clump
+  # for each of the 9 outcomes and, worse, hid a silent fallback that
+  # collapsed the sentinel set to a handful of loci (see that script's header).
+  make_option("--sentinels",    type = "character"),
   make_option("--window_kb",    type = "integer", default = 500L),
   make_option("--pp4_thresh",   type = "double",  default = 0.8),
-  make_option("--gwas_p_thresh",type = "double",  default = 5e-8),
   make_option("--out",          type = "character", default = "coloc_results.csv")
 )
 opt <- parse_args(OptionParser(option_list = opt_list))
@@ -34,6 +42,10 @@ load_sumstat <- function(trait, dir) {
   if (!file.exists(f)) stop(sprintf("File not found: %s", f))
   # fread() requires R.utils for direct .gz reading — use gunzip pipe instead
   dt <- fread(cmd = paste("gunzip -c", shQuote(f)), na.strings = "NA")
+  # NOTE: do not add a `pval := 10^(-log10p)` column. It underflows to exactly
+  # 0 for -log10P > 323.3, and any ranking or `== min()` comparison on it then
+  # silently selects every variant below the double-precision floor. Threshold
+  # and sort on log10p instead.
   # Standardise column names from REGENIE output
   setnames(dt,
     old = intersect(c("ID", "CHROM", "GENPOS", "ALLELE0", "ALLELE1",
@@ -43,7 +55,6 @@ load_sumstat <- function(trait, dir) {
                       "freq", "N", "beta", "se", "log10p"),
                     c("SNP", "CHR", "BP", "A2", "A1", "freq", "N", "beta", "se", "log10p"))
   )
-  dt[, pval := 10^(-log10p)]
   dt
 }
 
@@ -120,46 +131,42 @@ message("[coloc] Loading summary statistics...")
 exp_dt  <- load_sumstat(paste0("lipids_", opt$lipid_trait), opt$sumstat_dir)
 out_dt  <- load_sumstat(paste0("outcomes_", opt$outcome),   opt$sumstat_dir)
 
-# Identify genome-wide significant sentinel SNPs in the exposure
-sig_snps <- exp_dt[pval < opt$gwas_p_thresh]
-if (nrow(sig_snps) == 0) {
-  message("[coloc] No GWS SNPs — exiting")
+# ── Sentinels: read the cached, pre-clumped list ──────────────────────────
+# Produced by make_coloc_sentinels.R. Required, and validated here: an empty
+# or missing file is a hard error, never a reason to guess a sentinel set.
+if (is.null(opt$sentinels) || !nzchar(opt$sentinels)) {
+  stop("--sentinels is required (run make_coloc_sentinels.R first)")
+}
+if (!file.exists(opt$sentinels)) {
+  stop(sprintf("Sentinel file not found: %s", opt$sentinels))
+}
+sent_dt <- fread(opt$sentinels)
+if (nrow(sent_dt) == 0) {
+  message("[coloc] Sentinel file is empty — no GWS loci for this exposure. Exiting.")
   quit(status = 0)
 }
+if (!"SNP" %in% names(sent_dt)) stop("Sentinel file has no SNP column: ", opt$sentinels)
+sentinels <- sent_dt$SNP
 
-# LD clumping to get independent sentinels (p < 5e-8, r2 < 0.001)
-# Requires PLINK — write temp file and clump
-tmp_dir  <- tempdir()
-tmp_pval <- file.path(tmp_dir, "pval.txt")
-fwrite(sig_snps[, .(SNP, pval)], tmp_pval, sep = "\t")
+message(sprintf("[coloc] %d sentinel loci on %d chromosomes (from %s)",
+                length(sentinels), uniqueN(sent_dt$CHR), basename(opt$sentinels)))
 
-# UKB_GENO_STEP2 exported by SLURM script via config/tacc_paths.sh
-# NOTE: plink2 does not support --clump; use plink1.9 for clumping.
-# plink1.9 is available at the same software directory.
-geno <- Sys.getenv("UKB_GENO_STEP2")
-plink1_bin <- "/path/to/software/plink"  # plink1.9
-if (!file.exists(plink1_bin)) {
-  plink1_bin <- sub("plink2$", "plink", Sys.getenv("PLINK2",
-    unset = "/path/to/software/plink2"))
-}
-clump_cmd <- sprintf(
-  "%s --bfile %s --clump %s --clump-snp-field SNP --clump-field pval --clump-p1 5e-8 --clump-p2 1e-4 --clump-r2 0.001 --clump-kb 10000 --out %s 2>/dev/null",
-  plink1_bin, geno, tmp_pval, file.path(tmp_dir, "clump")
-)
-system(clump_cmd)
-clump_out <- file.path(tmp_dir, "clump.clumped")
-if (file.exists(clump_out)) {
-  sentinels <- fread(clump_out)$SNP
-} else {
-  # Fall back: just top SNP per 1Mb window
-  setkey(sig_snps, CHR, BP)
-  sentinels <- sig_snps[pval == min(pval), SNP]
-}
-message(sprintf("[coloc] Found %d independent sentinel SNPs", length(sentinels)))
+# Run coloc at each locus.
+# Split by chromosome first. run_coloc_window filters with CHR == chr & BP in
+# range, which is a full vector scan of the entire table for EVERY sentinel;
+# with a few hundred sentinels over millions of rows that dominates runtime and
+# is pure waste, since a sentinel can only match rows on its own chromosome.
+# Splitting once makes each window scan one chromosome instead of the genome.
+# Performance only -- the selected rows are identical.
+exp_by_chr <- split(exp_dt, exp_dt$CHR)
+out_by_chr <- split(out_dt, out_dt$CHR)
 
-# Run coloc at each locus
-results <- rbindlist(lapply(sentinels, function(s) {
-  run_coloc_window(exp_dt, out_dt, s, opt$window_kb, opt$pp4_thresh)
+results <- rbindlist(lapply(seq_len(nrow(sent_dt)), function(i) {
+  s  <- sent_dt$SNP[i]
+  ch <- as.character(sent_dt$CHR[i])
+  e  <- exp_by_chr[[ch]]; o <- out_by_chr[[ch]]
+  if (is.null(e) || is.null(o)) return(NULL)
+  run_coloc_window(e, o, s, opt$window_kb, opt$pp4_thresh)
 }), fill = TRUE)
 
 if (nrow(results) > 0) {

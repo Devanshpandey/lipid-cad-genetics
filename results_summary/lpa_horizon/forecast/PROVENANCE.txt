@@ -1,0 +1,7 @@
+commit c2f7eca
+job 3600935
+date Fri Nov 20 22:30:29 CST 2026
+af96702bf5b9dcbba0bea8a6adb527a7  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_forecast.R
+408990dd06369cb0490f552f327b7b81  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc2.R
+03a7ee5e873ab0800c34cac935f92a0e  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_horizon_posthoc.R
+6e1c268df17113e7959d4078ee830b64  /path/to/cad-genetics/scripts/agent1_genetics/lpa_horizon/lpa_horizon.R

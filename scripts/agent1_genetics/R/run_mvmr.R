@@ -89,10 +89,27 @@ if (length(active_traits) < 2) stop("[MVMR] Need at least 2 exposure traits.")
 message("[MVMR] Selecting instruments (GWS SNPs across all lipid traits)...")
 
 # Greedy LD-distance clumping per trait, then take union
+# BUGFIX: rank on LOG10P, not on pval. pval = 10^(-LOG10P) underflows to exactly 0
+# for LOG10P > ~323 -- 1,085 Lp(a) variants do. order(pval) then ties them all and
+# data.table's stable sort keeps whichever is first in FILE order, i.e. the lowest
+# genomic position: rs531596603 (chr6:160,179,747, LOG10P 438) instead of rs10455872
+# (161,010,118, LOG10P 14,632). The 10 Mb exclusion then removed the entire real
+# locus. Consequence: Lp(a) conditional F was 12.8; with the lead variant correctly
+# selected it is 239.5.
+# BUGFIX (2): the guard was written as
+#     any(same_chr & abs(keep_pos[same_chr] - pos) < window)
+# in which the left operand has one element per KEPT variant and the right operand
+# one element per SAME-CHROMOSOME kept variant. R recycles the shorter vector, so
+# the two are misaligned whenever the same-chromosome variants are not a prefix of
+# the kept list, and the guard then returns FALSE for variants that are in fact
+# inside the window. Two variants 26 bp apart (rs10933975/rs10933976, r2 = 1.00)
+# both survived into the 255-instrument set this way; 47 of the 27,028 instrument
+# pairs had r2 > 0.01. Subsetting already restricts the comparison to the same
+# chromosome, so the same_chr term is redundant as well as wrong.
 greedy_clump <- function(dt, p_thresh, kb_window) {
-  gws <- dt[pval < p_thresh & !is.na(BETA) & !is.na(SE)]
+  gws <- dt[LOG10P > -log10(p_thresh) & !is.na(BETA) & !is.na(SE)]
   if (nrow(gws) == 0) return(character(0))
-  gws <- gws[order(pval)]
+  gws <- gws[order(-LOG10P)]
   keep_snps <- character(0)
   keep_pos  <- integer(0)
   keep_chr  <- character(0)
@@ -101,7 +118,7 @@ greedy_clump <- function(dt, p_thresh, kb_window) {
     pos <- as.integer(gws$GENPOS[i])
     same_chr <- keep_chr == chr
     if (length(keep_pos) == 0 ||
-        !any(same_chr & abs(keep_pos[same_chr] - pos) < kb_window * 1000L)) {
+        !any(abs(keep_pos[same_chr] - pos) < kb_window * 1000L)) {
       keep_snps <- c(keep_snps, gws$ID[i])
       keep_pos  <- c(keep_pos,  pos)
       keep_chr  <- c(keep_chr,  chr)
@@ -123,10 +140,10 @@ for (trait in active_traits) {
 # Build a reference row per SNP using the trait with lowest p-value
 snp_ref <- rbindlist(lapply(active_traits, function(tr) {
   lipid_data[[tr]][ID %in% all_instruments,
-                   .(ID, CHROM, GENPOS, pval)]
+                   .(ID, CHROM, GENPOS, LOG10P)]
 }))
-snp_ref <- snp_ref[snp_ref[, .I[which.min(pval)], by = ID]$V1]
-snp_ref <- snp_ref[order(pval)]
+snp_ref <- snp_ref[snp_ref[, .I[which.max(LOG10P)], by = ID]$V1]
+snp_ref <- snp_ref[order(-LOG10P)]
 
 final_instruments <- character(0)
 final_pos  <- integer(0)
@@ -136,7 +153,7 @@ for (i in seq_len(nrow(snp_ref))) {
   pos <- as.integer(snp_ref$GENPOS[i])
   same_chr <- final_chr == chr
   if (length(final_pos) == 0 ||
-      !any(same_chr & abs(final_pos[same_chr] - pos) < opt$kb_clump * 1000L)) {
+      !any(abs(final_pos[same_chr] - pos) < opt$kb_clump * 1000L)) {
     final_instruments <- c(final_instruments, snp_ref$ID[i])
     final_pos <- c(final_pos, pos)
     final_chr <- c(final_chr, chr)
@@ -221,6 +238,25 @@ se_out   <- out_sub$SE[valid]
 
 n_final <- nrow(beta_mat)
 message(sprintf("[MVMR] Final: %d SNPs with complete exposure + outcome data", n_final))
+
+# Dump the exact instrument set entering the model. Diagnostic only -- nothing below
+# reads this file -- but it is what makes the instrument set auditable: how many
+# variants sit in the LPA cis window, and what the maximum pairwise LD among the
+# instruments is once they are written out for PLINK.
+if (!is.null(opt$out) && nzchar(opt$out)) {
+  iv_ids <- rownames(beta_mat)
+  iv_dt  <- ref_alleles[match(iv_ids, ID), .(ID, CHROM, GENPOS, ALLELE1, ALLELE0)]
+  for (tr in active_traits) {
+    lp <- lipid_data[[tr]][match(iv_ids, ID), LOG10P]
+    iv_dt[, (paste0("LOG10P_", tr)) := lp]
+  }
+  iv_dt[, in_LPA_cis := as.character(CHROM) == "6" &
+          GENPOS >= 160500000L & GENPOS <= 161700000L]
+  iv_path <- sub("\\.csv$", "", opt$out)
+  fwrite(iv_dt, paste0(iv_path, ".instruments.tsv"), sep = "\t")
+  message(sprintf("[MVMR] instrument dump: %s.instruments.tsv (%d SNPs, %d in the LPA cis window)",
+                  iv_path, nrow(iv_dt), sum(iv_dt$in_LPA_cis)))
+}
 if (n_final < opt$min_ivs) {
   message(sprintf("[MVMR] Too few final SNPs (%d) — skipping", n_final))
   quit(status = 0)
@@ -238,6 +274,14 @@ mr_input <- mr_mvinput(
 )
 
 mvivw_res <- mr_mvivw(mr_input)
+
+# Multivariable weighted median. The manuscript states the MVMR estimates are
+# "robust across inverse-variance-weighted, MR-Egger and weighted-median
+# estimators", but no median estimator was ever computed in the joint model --
+# only run_mr.R (univariable) had one. This supplies it.
+mvmedian_res <- tryCatch(mr_mvmedian(mr_input), error = function(e) {
+  message("  MVMR weighted median failed: ", e$message); NULL
+})
 
 # MVMR-Egger sensitivity (tests directional pleiotropy)
 mvegger_res <- tryCatch(
@@ -262,7 +306,12 @@ if (has_mvmr) {
       RSID   = rownames(beta_mat)
     )
     fstats <- strength_mvmr(mvmr_input, gencov = 0)  # gencov=0 = no genetic covariance
-    cond_f[active_traits] <- fstats$exposure[match(active_traits, rownames(fstats))]
+    # BUGFIX: strength_mvmr() returns ONE ROW with columns exposure1..exposureK, so
+    # fstats$exposure is NULL -> "replacement has length zero" -> tryCatch swallowed
+    # the error and BOTH cond_F and Q_A were silently dropped (the throw happened
+    # before pleiotropy_mvmr was reached). That left pleiotropy_flag permanently
+    # FALSE, because it keys on Q_A_pval.
+    cond_f[active_traits] <- as.numeric(fstats[1, seq_along(active_traits)])
 
     # Q_A: test for pleiotropy
     qa_res <- pleiotropy_mvmr(mvmr_input)
@@ -295,13 +344,24 @@ results <- data.table(
   mvegger_pval     = if (!is.null(mvegger_res)) mvegger_res@Pvalue.Est      else rep(NA_real_, n_exp),
   mvegger_intercept   = if (!is.null(mvegger_res)) rep(mvegger_res@Intercept,   n_exp) else rep(NA_real_, n_exp),
   mvegger_intercept_p = if (!is.null(mvegger_res)) rep(mvegger_res@Pvalue.Int,  n_exp) else rep(NA_real_, n_exp),
+  # MVMR weighted median
+  mvmedian_b       = if (!is.null(mvmedian_res)) mvmedian_res@Estimate     else rep(NA_real_, n_exp),
+  mvmedian_se      = if (!is.null(mvmedian_res)) mvmedian_res@StdError     else rep(NA_real_, n_exp),
+  mvmedian_pval    = if (!is.null(mvmedian_res)) mvmedian_res@Pvalue       else rep(NA_real_, n_exp),
+  mvmedian_OR      = if (!is.null(mvmedian_res)) exp(mvmedian_res@Estimate) else rep(NA_real_, n_exp),
+  mvmedian_OR_lo95 = if (!is.null(mvmedian_res)) exp(mvmedian_res@Estimate - 1.96*mvmedian_res@StdError) else rep(NA_real_, n_exp),
+  mvmedian_OR_hi95 = if (!is.null(mvmedian_res)) exp(mvmedian_res@Estimate + 1.96*mvmedian_res@StdError) else rep(NA_real_, n_exp),
   # Instrument strength
   cond_F           = cond_f[active_traits],
   weak_instrument  = cond_f[active_traits] < 10,
   # Pleiotropy
   Q_A_stat         = Q_A_stat,
   Q_A_pval         = Q_A_pval,
-  pleiotropy_flag  = !is.na(Q_A_pval) & Q_A_pval < 0.05
+  # CLAUDE.md convention: "flag if Egger intercept p < 0.05". The old flag keyed
+  # only on Q_A, which was always NA, so it could never fire. Flag on either.
+  egger_intercept_flag = if (!is.null(mvegger_res)) rep(!is.na(mvegger_res@Pvalue.Int) & mvegger_res@Pvalue.Int < 0.05, n_exp) else rep(NA, n_exp),
+  pleiotropy_flag  = (!is.na(Q_A_pval) & Q_A_pval < 0.05) |
+                     (if (!is.null(mvegger_res)) rep(!is.na(mvegger_res@Pvalue.Int) & mvegger_res@Pvalue.Int < 0.05, n_exp) else rep(FALSE, n_exp))
 )
 
 dir.create(dirname(opt$out), showWarnings = FALSE, recursive = TRUE)

@@ -1,0 +1,7 @@
+gate,value,target,rule,pass
+eligible cohort,379654,379654,equal,TRUE
+its events,15978,15978,equal,TRUE
+"LPA-region score present, %",100,99.9,at least,TRUE
+parts sum to the original lipid-region score (max error),4.85722573273506e-16,1e-09,below,TRUE
+pre-registered Lp(a) x lipid-region product reproduced,-0.046249849443862,-0.046249849443862,within 1e-6,TRUE
+pre-registered Lp(a) x non-lipid product reproduced,0.00715778204559157,0.00715778204559157,within 1e-6,TRUE

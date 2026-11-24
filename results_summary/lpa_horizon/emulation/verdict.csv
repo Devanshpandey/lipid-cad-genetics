@@ -1,0 +1,2 @@
+verdict,anchors_ok,lpa_present,lpa_attenuated,ldl_control_present,lpa_more_attenuated_than_ldl,specificity_diff,specificity_se,specificity_p,zph_p_lpa_established,unmodelled_bias_log_hr,bias_material
+PARTIAL_PERSISTENCE,TRUE,TRUE,TRUE,TRUE,FALSE,-0.160797107302494,0.22815541619184,0.240476670508826,0.116746296373131,-0.0085603986306006,FALSE
